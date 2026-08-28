@@ -41,7 +41,7 @@
 </main>
 
 <script>
-  const $=id=>document.getElementById(id), esc=v=>String(v??'—').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const $=id=>document.getElementById(id), esc=v=>String(v??'—').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])), plain=v=>String(v??'').replace(/<[^>]*>/g,'');
   const num=(v,d=2)=>v==null||Number.isNaN(Number(v))?'—':Number(v).toLocaleString('zh-CN',{minimumFractionDigits:d,maximumFractionDigits:d});
   const signed=(v,s='',d=2)=>v==null?'—':`${Number(v)>0?'+':''}${num(v,d)}${s}`;
   const tone=v=>v==null?'':Number(v)>=0?'up':'down';
@@ -76,7 +76,7 @@
     const sh=d.indices?.find(x=>x.code==='000001');
     $('title').textContent=d.narrative?.title||`${d.date} A股资金面复盘`;
     $('heroSub').textContent=d.narrative?.subtitle||'盘后资金面复盘';
-    $('conclusion').textContent=d.narrative?.conclusion||'核心结论待补充';
+    $('conclusion').textContent=plain(d.narrative?.conclusion)||'核心结论待补充';
     $('updatedAt').textContent=`最近更新 ${fmtTime(d.updatedAt)} · ${d.status==='verified'?'已核验报告':d.status==='fresh'?'主要模块已更新':'部分模块待披露'}`;
     $('summary').innerHTML=[
       ['上证指数',num(sh?.close),signed(sh?.pct,'%'),tone(sh?.pct)],
