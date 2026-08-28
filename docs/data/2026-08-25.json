@@ -1,0 +1,494 @@
+{
+  "date": "2026-08-25",
+  "quoteDate": "2026-08-25",
+  "updatedAt": "2026-08-26T01:21:03.000Z",
+  "status": "historical",
+  "indices": [
+    {
+      "code": "000001",
+      "name": "上证指数",
+      "close": 3889.44,
+      "pct": 0.19,
+      "amount": 8588.74
+    },
+    {
+      "code": "399001",
+      "name": "深证成指",
+      "close": 13745.87,
+      "pct": -0.35,
+      "amount": 9729.7
+    },
+    {
+      "code": "399006",
+      "name": "创业板指",
+      "close": 3397.52,
+      "pct": -1,
+      "amount": 4665.99
+    },
+    {
+      "code": "000688",
+      "name": "科创50",
+      "close": 1604.59,
+      "pct": 0.14,
+      "amount": 753
+    },
+    {
+      "code": "000300",
+      "name": "沪深300",
+      "close": 4552.03,
+      "pct": -0.24,
+      "amount": 4804.22
+    }
+  ],
+  "turnover": 18318.44,
+  "breadth": {
+    "up": 4234,
+    "down": 1246,
+    "limitUp": 65,
+    "limitDown": null,
+    "broken": 22
+  },
+  "flow": {
+    "topIn": [
+      {
+        "name": "英维克",
+        "value": 16.36
+      },
+      {
+        "name": "C高凯",
+        "value": 12.08
+      },
+      {
+        "name": "光智科技",
+        "value": 5.31
+      },
+      {
+        "name": "飞龙股份",
+        "value": 5.2
+      },
+      {
+        "name": "立讯精密",
+        "value": 4.65
+      }
+    ],
+    "topOut": [
+      {
+        "name": "中际旭创",
+        "value": -25.23
+      },
+      {
+        "name": "新易盛",
+        "value": -8.91
+      },
+      {
+        "name": "宁德时代",
+        "value": -7.2
+      },
+      {
+        "name": "中材科技",
+        "value": -5.19
+      },
+      {
+        "name": "北方华创",
+        "value": -4.78
+      }
+    ],
+    "source": "既有复盘报告所列盘后主力资金口径"
+  },
+  "margin": {
+    "date": "2026-08-24",
+    "total": 26564.94,
+    "financing": 26290.74,
+    "lending": 274.2
+  },
+  "lhb": {
+    "status": "complete",
+    "billboardTotal": null,
+    "institutionTotal": 31,
+    "buyCount": 15,
+    "sellCount": 16,
+    "dayNet": 4.27,
+    "buy": [
+      {
+        "code": "600487",
+        "name": "亨通光电",
+        "pct": 6.9,
+        "turnover": 10.6,
+        "instBuy": null,
+        "instSell": null,
+        "net": 65630.69,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日振幅16.44%；机构专用席位净买入"
+      },
+      {
+        "code": "601869",
+        "name": "长飞光纤",
+        "pct": 4.04,
+        "turnover": 5.14,
+        "instBuy": null,
+        "instSell": null,
+        "net": 16790.68,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日振幅19.16%；6家机构专用席位"
+      },
+      {
+        "code": "000603",
+        "name": "盛达资源",
+        "pct": -9.01,
+        "turnover": 14.26,
+        "instBuy": null,
+        "instSell": null,
+        "net": 16340.3,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日跌幅偏离-9.34%；6家机构专用席位"
+      },
+      {
+        "code": "688828",
+        "name": "国仪公司",
+        "pct": 6.14,
+        "turnover": 32.05,
+        "instBuy": null,
+        "instSell": null,
+        "net": 14915,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "002837",
+        "name": "英维克",
+        "pct": 10.01,
+        "turnover": 8.51,
+        "instBuy": null,
+        "instSell": null,
+        "net": 13650.23,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "002580",
+        "name": "圣阳股份",
+        "pct": 0.86,
+        "turnover": 24.59,
+        "instBuy": null,
+        "instSell": null,
+        "net": 5420.19,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "601069",
+        "name": "西部黄金",
+        "pct": -7.92,
+        "turnover": 5.26,
+        "instBuy": null,
+        "instSell": null,
+        "net": 4961.85,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "000688",
+        "name": "国城矿业",
+        "pct": -8.64,
+        "turnover": 2.65,
+        "instBuy": null,
+        "instSell": null,
+        "net": 3901.17,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "002703",
+        "name": "浙江世宝",
+        "pct": 9.98,
+        "turnover": 12.89,
+        "instBuy": null,
+        "instSell": null,
+        "net": 2444.47,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "000506",
+        "name": "招金黄金",
+        "pct": -7.74,
+        "turnover": 10.83,
+        "instBuy": null,
+        "instSell": null,
+        "net": 2234.51,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "301152",
+        "name": "天力锂能",
+        "pct": 2.83,
+        "turnover": 36.83,
+        "instBuy": null,
+        "instSell": null,
+        "net": 1793.04,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "300922",
+        "name": "天秦装备",
+        "pct": 19.99,
+        "turnover": 13.68,
+        "instBuy": null,
+        "instSell": null,
+        "net": 1197.42,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "300097",
+        "name": "智云股份",
+        "pct": 20.05,
+        "turnover": 17.7,
+        "instBuy": null,
+        "instSell": null,
+        "net": 484.01,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "920059",
+        "name": "双英集团",
+        "pct": 0.6,
+        "turnover": 22.32,
+        "instBuy": null,
+        "instSell": null,
+        "net": 226.44,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "920176",
+        "name": "维琪科技",
+        "pct": 13.63,
+        "turnover": 42.28,
+        "instBuy": null,
+        "instSell": null,
+        "net": 170.33,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      }
+    ],
+    "sell": [
+      {
+        "code": "002491",
+        "name": "通鼎互联",
+        "pct": 2.84,
+        "turnover": 24.28,
+        "instBuy": null,
+        "instSell": null,
+        "net": -39833.94,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日换手率24.28%；6家机构专用席位"
+      },
+      {
+        "code": "688169",
+        "name": "石头科技",
+        "pct": 20,
+        "turnover": 7.47,
+        "instBuy": null,
+        "instSell": null,
+        "net": -19345.31,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日涨幅20.00%；2家机构专用席位卖出"
+      },
+      {
+        "code": "603565",
+        "name": "中谷物流",
+        "pct": -7.32,
+        "turnover": 3.81,
+        "instBuy": null,
+        "instSell": null,
+        "net": -15939.87,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日跌幅偏离-7.51%；4家机构专用席位卖出"
+      },
+      {
+        "code": "688717",
+        "name": "艾罗能源",
+        "pct": -16.04,
+        "turnover": 15.85,
+        "instBuy": null,
+        "instSell": null,
+        "net": -7017.94,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "002821",
+        "name": "凯莱英",
+        "pct": 10,
+        "turnover": 5.37,
+        "instBuy": null,
+        "instSell": null,
+        "net": -5576.16,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "002437",
+        "name": "誉衡药业",
+        "pct": 9.14,
+        "turnover": 37.79,
+        "instBuy": null,
+        "instSell": null,
+        "net": -4823.8,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "002636",
+        "name": "金安国纪",
+        "pct": 5.94,
+        "turnover": 7.56,
+        "instBuy": null,
+        "instSell": null,
+        "net": -4397.65,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "301591",
+        "name": "肯特股份",
+        "pct": 6.07,
+        "turnover": 33.22,
+        "instBuy": null,
+        "instSell": null,
+        "net": -3156.56,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "002132",
+        "name": "恒星科技",
+        "pct": -7.5,
+        "turnover": 16.1,
+        "instBuy": null,
+        "instSell": null,
+        "net": -1898.91,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "002412",
+        "name": "汉森制药",
+        "pct": 9.99,
+        "turnover": 21.27,
+        "instBuy": null,
+        "instSell": null,
+        "net": -1399.29,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "002172",
+        "name": "澳洋健康",
+        "pct": 4.05,
+        "turnover": 31.19,
+        "instBuy": null,
+        "instSell": null,
+        "net": -1261.79,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "300642",
+        "name": "透景生命",
+        "pct": 20,
+        "turnover": 8.18,
+        "instBuy": null,
+        "instSell": null,
+        "net": -1158.2,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "002081",
+        "name": "金螳螂",
+        "pct": 10,
+        "turnover": 8.31,
+        "instBuy": null,
+        "instSell": null,
+        "net": -665.11,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "300542",
+        "name": "新晨科技",
+        "pct": 16.74,
+        "turnover": 19.09,
+        "instBuy": null,
+        "instSell": null,
+        "net": -577.41,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "300189",
+        "name": "神农种业",
+        "pct": 6.68,
+        "turnover": 36.77,
+        "instBuy": null,
+        "instSell": null,
+        "net": -371,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      },
+      {
+        "code": "301130",
+        "name": "西点药业",
+        "pct": 17.01,
+        "turnover": 36.69,
+        "instBuy": null,
+        "instSell": null,
+        "net": -49.04,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构专用席位（证券时报·数据宝单证券去重表）"
+      }
+    ]
+  },
+  "gaps": [
+    "本页由当日已核验单文件报告导入，保留关键指标与已有龙虎榜明细"
+  ],
+  "sources": [
+    "本地归档的当日自包含复盘报告及其核验记录"
+  ]
+}
