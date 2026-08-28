@@ -1,0 +1,115 @@
+{
+  "date": "2026-08-28",
+  "quoteDate": "2026-08-28",
+  "updatedAt": "2026-08-28T03:12:59.687Z",
+  "status": "partial",
+  "indices": [
+    {
+      "code": "000001",
+      "name": "上证指数",
+      "close": 3957.67,
+      "pct": 0.03,
+      "amount": 6176.12
+    },
+    {
+      "code": "399001",
+      "name": "深证成指",
+      "close": 14006.79,
+      "pct": -0.3,
+      "amount": 7295.31
+    },
+    {
+      "code": "399006",
+      "name": "创业板指",
+      "close": 3457.42,
+      "pct": -0.46,
+      "amount": 3619.27
+    },
+    {
+      "code": "000688",
+      "name": "科创50",
+      "close": 1678.78,
+      "pct": -0.87,
+      "amount": 563.27
+    },
+    {
+      "code": "000300",
+      "name": "沪深300",
+      "close": 4621.55,
+      "pct": -0.19,
+      "amount": 3476.3
+    }
+  ],
+  "turnover": 13471.43,
+  "breadth": {
+    "up": 2852,
+    "down": 2256,
+    "limitUp": 61,
+    "limitDown": 0,
+    "broken": 14
+  },
+  "flow": {
+    "topIn": [
+      {
+        "name": "通信网络设备及器件",
+        "value": 27.44
+      },
+      {
+        "name": "计算机",
+        "value": 24.37
+      },
+      {
+        "name": "软件开发",
+        "value": 23.57
+      },
+      {
+        "name": "横向通用软件",
+        "value": 19.7
+      },
+      {
+        "name": "基础化工",
+        "value": 10.74
+      },
+      {
+        "name": "化学制品",
+        "value": 8.51
+      },
+      {
+        "name": "元件",
+        "value": 8.23
+      },
+      {
+        "name": "其他电子Ⅲ",
+        "value": 7.75
+      }
+    ],
+    "topOut": [],
+    "source": "东方财富行业主力资金算法"
+  },
+  "margin": {
+    "date": "2026-08-27",
+    "total": 26651.17,
+    "financing": 26364.09,
+    "lending": 287.08
+  },
+  "lhb": {
+    "status": "pending",
+    "billboardTotal": null,
+    "institutionTotal": null,
+    "buyCount": null,
+    "sellCount": null,
+    "dayNet": null,
+    "buy": [],
+    "sell": []
+  },
+  "gaps": [
+    "当日完整龙虎榜尚未披露，将在19:35再次抓取",
+    "两融为T+1披露，当前显示2026-08-27数据"
+  ],
+  "sources": [
+    "东方财富盘后延迟行情节点",
+    "东方财富涨跌停/炸板池",
+    "东方财富交易公开信息",
+    "东方财富两融历史"
+  ]
+}
