@@ -1,86 +1,86 @@
 {
   "date": "2026-08-28",
   "quoteDate": "2026-08-28",
-  "updatedAt": "2026-08-28T03:12:59.687Z",
+  "updatedAt": "2026-08-28T03:30:50.417Z",
   "status": "partial",
   "indices": [
     {
       "code": "000001",
       "name": "上证指数",
-      "close": 3957.67,
-      "pct": 0.03,
-      "amount": 6176.12
+      "close": 3959.64,
+      "pct": 0.08,
+      "amount": 6534.05
     },
     {
       "code": "399001",
       "name": "深证成指",
-      "close": 14006.79,
-      "pct": -0.3,
-      "amount": 7295.31
+      "close": 14029.83,
+      "pct": -0.14,
+      "amount": 7699.25
     },
     {
       "code": "399006",
       "name": "创业板指",
-      "close": 3457.42,
-      "pct": -0.46,
-      "amount": 3619.27
+      "close": 3462.07,
+      "pct": -0.32,
+      "amount": 3794.22
     },
     {
       "code": "000688",
       "name": "科创50",
-      "close": 1678.78,
-      "pct": -0.87,
-      "amount": 563.27
+      "close": 1681.25,
+      "pct": -0.72,
+      "amount": 591.46
     },
     {
       "code": "000300",
       "name": "沪深300",
-      "close": 4621.55,
-      "pct": -0.19,
-      "amount": 3476.3
+      "close": 4625.73,
+      "pct": -0.1,
+      "amount": 3679.93
     }
   ],
-  "turnover": 13471.43,
+  "turnover": 14233.3,
   "breadth": {
-    "up": 2852,
-    "down": 2256,
-    "limitUp": 61,
-    "limitDown": 0,
-    "broken": 14
+    "up": 2989,
+    "down": 2136,
+    "limitUp": 63,
+    "limitDown": 1,
+    "broken": 13
   },
   "flow": {
     "topIn": [
       {
         "name": "通信网络设备及器件",
-        "value": 27.44
-      },
-      {
-        "name": "计算机",
-        "value": 24.37
+        "value": 27.72
       },
       {
         "name": "软件开发",
-        "value": 23.57
+        "value": 23.1
+      },
+      {
+        "name": "计算机",
+        "value": 22.94
       },
       {
         "name": "横向通用软件",
-        "value": 19.7
+        "value": 19.93
       },
       {
         "name": "基础化工",
-        "value": 10.74
+        "value": 11.36
       },
       {
         "name": "化学制品",
-        "value": 8.51
-      },
-      {
-        "name": "元件",
-        "value": 8.23
+        "value": 9.75
       },
       {
         "name": "其他电子Ⅲ",
-        "value": 7.75
+        "value": 8.25
+      },
+      {
+        "name": "其他电子Ⅱ",
+        "value": 8.25
       }
     ],
     "topOut": [],
