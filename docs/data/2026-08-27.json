@@ -1,0 +1,84 @@
+{
+  "date": "2026-08-27",
+  "quoteDate": "2026-08-27",
+  "updatedAt": "2026-08-27T09:37:51.000Z",
+  "status": "historical",
+  "indices": [
+    {
+      "code": "000001",
+      "name": "上证指数",
+      "close": 3956.57,
+      "pct": 1.13,
+      "amount": 10102.27
+    },
+    {
+      "code": "399001",
+      "name": "深证成指",
+      "close": 14048.88,
+      "pct": 1.5,
+      "amount": 11157
+    },
+    {
+      "code": "399006",
+      "name": "创业板指",
+      "close": 3473.35,
+      "pct": 1.71,
+      "amount": 5457.02
+    },
+    {
+      "code": "000688",
+      "name": "科创50",
+      "close": 1693.48,
+      "pct": 3.77,
+      "amount": null
+    },
+    {
+      "code": "000300",
+      "name": "沪深300",
+      "close": 4630.28,
+      "pct": 0.86,
+      "amount": null
+    }
+  ],
+  "turnover": 21259.27,
+  "breadth": {
+    "up": 3394,
+    "down": 1944,
+    "limitUp": 77,
+    "limitDown": null,
+    "broken": 17
+  },
+  "flow": {
+    "topIn": [
+      {
+        "name": "电子（财联社口径）",
+        "value": 297.8
+      }
+    ],
+    "topOut": [],
+    "source": "既有复盘报告所列盘后主力资金口径"
+  },
+  "margin": {
+    "date": "2026-08-26",
+    "total": 26531.75,
+    "financing": 26250.54,
+    "lending": 281.21
+  },
+  "lhb": {
+    "status": "pending",
+    "billboardTotal": null,
+    "institutionTotal": null,
+    "buyCount": null,
+    "sellCount": null,
+    "dayNet": null,
+    "buy": [],
+    "sell": []
+  },
+  "gaps": [
+    "本页由当日已核验单文件报告导入，保留关键指标与已有龙虎榜明细",
+    "该版报告生成时完整龙虎榜尚未披露，未沿用前一交易日数据"
+  ],
+  "sources": [
+    "本地归档的当日自包含复盘报告及其核验记录"
+  ]
+}
