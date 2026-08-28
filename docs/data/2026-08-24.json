@@ -1,0 +1,195 @@
+{
+  "date": "2026-08-24",
+  "quoteDate": "2026-08-24",
+  "updatedAt": "2026-08-25T05:37:43.000Z",
+  "status": "historical",
+  "indices": [
+    {
+      "code": "000001",
+      "name": "上证指数",
+      "close": 3882.01,
+      "pct": -0.59,
+      "amount": 9520.39
+    },
+    {
+      "code": "399001",
+      "name": "深证成指",
+      "close": 13794.29,
+      "pct": -2.13,
+      "amount": 10554.17
+    },
+    {
+      "code": "399006",
+      "name": "创业板指",
+      "close": 3431.89,
+      "pct": -3.21,
+      "amount": 5085.83
+    },
+    {
+      "code": "000688",
+      "name": "科创50",
+      "close": 1602.34,
+      "pct": -3.1,
+      "amount": null
+    },
+    {
+      "code": "000300",
+      "name": "沪深300",
+      "close": 4563.13,
+      "pct": -1.21,
+      "amount": null
+    }
+  ],
+  "turnover": 20074.56,
+  "breadth": {
+    "up": null,
+    "down": null,
+    "limitUp": 46,
+    "limitDown": 14,
+    "broken": 16
+  },
+  "flow": {
+    "topIn": [
+      {
+        "name": "工业金属",
+        "value": 10.02
+      },
+      {
+        "name": "贵金属",
+        "value": 5.38
+      },
+      {
+        "name": "煤炭开采",
+        "value": 5.33
+      },
+      {
+        "name": "化学原料",
+        "value": 3.88
+      },
+      {
+        "name": "焦炭Ⅱ",
+        "value": 3.2
+      }
+    ],
+    "topOut": [
+      {
+        "name": "半导体",
+        "value": -181.61
+      },
+      {
+        "name": "通信设备",
+        "value": -140.74
+      },
+      {
+        "name": "元件",
+        "value": -79.36
+      },
+      {
+        "name": "光学光电子",
+        "value": -37.24
+      },
+      {
+        "name": "消费电子",
+        "value": -33.35
+      }
+    ],
+    "source": "既有复盘报告所列盘后主力资金口径"
+  },
+  "margin": {
+    "date": "2026-08-24",
+    "total": 26564.94,
+    "financing": 26290.74,
+    "lending": 274.2
+  },
+  "lhb": {
+    "status": "complete",
+    "billboardTotal": 60,
+    "institutionTotal": null,
+    "buyCount": null,
+    "sellCount": null,
+    "dayNet": -9.22,
+    "buy": [
+      {
+        "code": "000506",
+        "name": "招金黄金",
+        "pct": null,
+        "turnover": null,
+        "instBuy": null,
+        "instSell": null,
+        "net": 4711,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构净买入"
+      },
+      {
+        "code": "000065",
+        "name": "北方国际",
+        "pct": 10.03,
+        "turnover": null,
+        "instBuy": null,
+        "instSell": null,
+        "net": 4643,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构净买入"
+      },
+      {
+        "code": "002104",
+        "name": "恒宝股份",
+        "pct": null,
+        "turnover": null,
+        "instBuy": null,
+        "instSell": null,
+        "net": 4330,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构净买入"
+      }
+    ],
+    "sell": [
+      {
+        "code": "002716",
+        "name": "湖南白银",
+        "pct": 9.98,
+        "turnover": null,
+        "instBuy": null,
+        "instSell": null,
+        "net": -25800,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构净卖出"
+      },
+      {
+        "code": "000603",
+        "name": "盛达资源",
+        "pct": 8.88,
+        "turnover": null,
+        "instBuy": null,
+        "instSell": null,
+        "net": -22900,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构净卖出"
+      },
+      {
+        "code": "300139",
+        "name": "晓程科技",
+        "pct": 8.66,
+        "turnover": null,
+        "instBuy": null,
+        "instSell": null,
+        "net": -11900,
+        "ratio": null,
+        "window": "当日",
+        "reason": "机构净卖出"
+      }
+    ]
+  },
+  "gaps": [
+    "本页由当日已核验单文件报告导入，保留关键指标与已有龙虎榜明细",
+    "原报告未提供全市场上涨/下跌家数，在线历史页显示为—"
+  ],
+  "sources": [
+    "本地归档的当日自包含复盘报告及其核验记录"
+  ]
+}
