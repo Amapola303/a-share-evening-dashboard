@@ -3,29 +3,43 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 const dateFmt = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit" });
 const targetDate = process.env.REVIEW_DATE || dateFmt.format(new Date());
 const dataDir = new URL("../docs/data/", import.meta.url);
-const headers = { "user-agent": "Mozilla/5.0 (compatible; AShareEveningDashboard/2.0)", referer: "https://data.eastmoney.com/" };
+const headers = {
+  "user-agent": "Mozilla/5.0 (compatible; AShareEveningDashboard/2.1)",
+  referer: "https://data.eastmoney.com/",
+  "cache-control": "no-cache",
+  pragma: "no-cache",
+};
 const n = (value) => Number.isFinite(Number(value)) ? Number(value) : null;
 const round = (value, digits = 2) => value == null || !Number.isFinite(Number(value)) ? null : Number(Number(value).toFixed(digits));
 
 async function getJson(url, requestHeaders = headers) {
   let lastError;
-  for (let attempt = 0; attempt < 3; attempt += 1) {
+  for (let attempt = 0; attempt < 5; attempt += 1) {
     try {
       const response = await fetch(url, { headers: requestHeaders, signal: AbortSignal.timeout(25000) });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       return await response.json();
     } catch (error) {
       lastError = error;
-      if (attempt < 2) await new Promise((resolve) => setTimeout(resolve, 500 * (attempt + 1)));
+      if (attempt < 4) await new Promise((resolve) => setTimeout(resolve, 800 * 2 ** attempt));
     }
   }
   throw lastError;
 }
 
 async function getText(url, requestHeaders = headers) {
-  const response = await fetch(url, { headers: requestHeaders, signal: AbortSignal.timeout(25000) });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  return await response.text();
+  let lastError;
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    try {
+      const response = await fetch(url, { headers: requestHeaders, signal: AbortSignal.timeout(25000) });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.text();
+    } catch (error) {
+      lastError = error;
+      if (attempt < 4) await new Promise((resolve) => setTimeout(resolve, 800 * 2 ** attempt));
+    }
+  }
+  throw lastError;
 }
 
 function shanghaiDateFromUnix(value) {
@@ -74,9 +88,12 @@ async function limitPool(endpoint) {
 
 async function fetchBreadth() {
   const overviewUrl = "https://push2delay.eastmoney.com/api/qt/ulist.np/get?fltt=2&invt=2&fields=f12,f104,f105,f124&secids=1.000001,0.399001";
-  const [overview, limitUp, limitDown, broken] = await Promise.all([
-    getJson(overviewUrl), limitPool("getTopicZTPool"), limitPool("getTopicDTPool"), limitPool("getTopicZBPool"),
-  ]);
+  // Keep these requests sequential. The public endpoint is noticeably less stable
+  // when four pool queries arrive at the same instant from one cloud runner.
+  const overview = await getJson(overviewUrl);
+  const limitUp = await limitPool("getTopicZTPool");
+  const limitDown = await limitPool("getTopicDTPool");
+  const broken = await limitPool("getTopicZBPool");
   const rows = overview?.data?.diff || [];
   if (rows.length !== 2) throw new Error("advance/decline overview incomplete");
   const up = rows.reduce((sum, row) => sum + Number(row.f104 || 0), 0);
@@ -129,16 +146,33 @@ async function fetchFlow() {
 
 async function emTable(reportName) {
   const filter = encodeURIComponent(`(TRADE_DATE>='${targetDate}')(TRADE_DATE<='${targetDate}')`);
-  const url = `https://datacenter-web.eastmoney.com/api/data/v1/get?reportName=${reportName}&columns=ALL&filter=${filter}&pageNumber=1&pageSize=500&source=WEB&client=WEB`;
-  const payload = await getJson(url);
-  return payload?.result?.data || [];
+  const rows = [];
+  const pageSize = 500;
+  let expected = null;
+  for (let pageNumber = 1; pageNumber <= 20; pageNumber += 1) {
+    const url = `https://datacenter-web.eastmoney.com/api/data/v1/get?reportName=${reportName}&columns=ALL&filter=${filter}&pageNumber=${pageNumber}&pageSize=${pageSize}&source=WEB&client=WEB`;
+    const payload = await getJson(url);
+    const result = payload?.result;
+    if (!result) return rows;
+    const pageRows = result.data || [];
+    if (expected == null) expected = Number(result.count ?? pageRows.length);
+    rows.push(...pageRows);
+    const pages = Number(result.pages ?? Math.ceil((expected || 0) / pageSize));
+    if (pageNumber >= pages || pageRows.length < pageSize) break;
+  }
+  if (Number.isFinite(expected) && rows.length < expected) {
+    throw new Error(`${reportName} incomplete: ${rows.length}/${expected}`);
+  }
+  return rows;
 }
 
 async function fetchLhb() {
-  const [bill, buys, sells] = await Promise.all([
-    emTable("RPT_DAILYBILLBOARD_DETAILS"), emTable("RPT_BILLBOARD_DAILYDETAILSBUY"), emTable("RPT_BILLBOARD_DAILYDETAILSSELL"),
-  ]);
+  // Fetch sequentially to reduce throttling; buy/sell tables can exceed 500 rows.
+  const bill = await emTable("RPT_DAILYBILLBOARD_DETAILS");
   if (!bill.length) return { status: "pending", billboardTotal: null, institutionTotal: null, buyCount: null, sellCount: null, dayNet: null, buy: [], sell: [], scope: "完整盘后表待披露，未沿用前一交易日" };
+  const buys = await emTable("RPT_BILLBOARD_DAILYDETAILSBUY");
+  const sells = await emTable("RPT_BILLBOARD_DAILYDETAILSSELL");
+  if (!buys.length || !sells.length) throw new Error("LHB institution-side tables incomplete");
   const names = new Map();
   const meta = new Map();
   for (const row of bill) {
@@ -181,11 +215,11 @@ async function fetchLhb() {
   const codes = new Set(bill.map((row) => String(row.SECURITY_CODE || "")).filter((code) => code && !/^(11|12)/.test(code)));
   const dayRows = all.filter((item) => item.window === "当日");
   return {
-    status: "complete", billboardTotal: codes.size, institutionTotal: new Set(dayRows.map((item) => item.code)).size,
+    status: "complete", billboardTotal: codes.size, institutionTotal: new Set(all.map((item) => item.code)).size,
     buyCount: new Set(dayRows.filter((item) => item.net > 0).map((item) => item.code)).size,
     sellCount: new Set(dayRows.filter((item) => item.net < 0).map((item) => item.code)).size,
     dayNet: round(dayNet), buy, sell,
-    scope: "东方财富交易公开信息；按证券与当日/3日窗口去重，当日净额剔除3日窗口与可转债",
+    scope: "东方财富交易公开信息完整分页表；机构现身按证券与当日/3日窗口去重，净买/净卖家数及净额只统计当日窗口并剔除可转债",
   };
 }
 
@@ -313,13 +347,20 @@ async function collect(previous) {
   const [indexResult, verifyResult, breadthResult, flowResult, marginResult, lhbResult, etfResult] = settled;
   const gaps = [];
   const indices = indexResult.status === "fulfilled" ? indexResult.value : { indices: [], quoteDate: null, turnover: null };
-  const breadthData = breadthResult.status === "fulfilled" ? breadthResult.value : {
+  const sameDayPrevious = previous?.date === targetDate ? previous : null;
+  const breadthData = breadthResult.status === "fulfilled" ? breadthResult.value : sameDayPrevious ? {
+    breadth: sameDayPrevious.breadth,
+    ladder: sameDayPrevious.ladder,
+  } : {
     breadth: { up: null, down: null, limitUp: null, limitUpAll: null, limitDown: null, limitDownAll: null, broken: null, brokenRate: null, newHigh: null, newLow: null, newHighRows: [] },
     ladder: { status: "pending", maxBoard: null, rows: [], source: "接口暂不可用" },
   };
-  const flow = flowResult.status === "fulfilled" ? flowResult.value : { groups: [], source: "待更新", scope: "接口暂不可用" };
-  const margin = marginResult.status === "fulfilled" ? marginResult.value : { date: null, total: null, financing: null, lending: null, change: null };
-  const lhb = lhbResult.status === "fulfilled" ? lhbResult.value : { status: "partial", billboardTotal: null, institutionTotal: null, buyCount: null, sellCount: null, dayNet: null, buy: [], sell: [], scope: "接口暂不可用" };
+  const flow = flowResult.status === "fulfilled" ? flowResult.value : sameDayPrevious?.flow ?? { groups: [], source: "待更新", scope: "接口暂不可用" };
+  const margin = marginResult.status === "fulfilled" ? marginResult.value : sameDayPrevious?.margin ?? { date: null, total: null, financing: null, lending: null, change: null };
+  const fetchedLhb = lhbResult.status === "fulfilled" ? lhbResult.value : null;
+  const lhb = fetchedLhb?.status === "pending" && sameDayPrevious?.lhb?.status === "complete"
+    ? { ...sameDayPrevious.lhb, scope: `${sameDayPrevious.lhb.scope}；本次接口返回空，保留同交易日已核验完整表` }
+    : fetchedLhb ?? sameDayPrevious?.lhb ?? { status: "partial", billboardTotal: null, institutionTotal: null, buyCount: null, sellCount: null, dayNet: null, buy: [], sell: [], scope: "接口暂不可用" };
   const etf = etfResult.status === "fulfilled" ? etfResult.value : previous?.etf ?? { rows: [], shareSeries: {}, asOf: null, source: "接口暂不可用" };
   const macro = carryMacro(previous?.macro);
   if (indexResult.status === "rejected") gaps.push("指数与成交额接口暂不可用");
@@ -329,7 +370,7 @@ async function collect(previous) {
   if (marginResult.status === "rejected") gaps.push("两融最近披露值暂不可用");
   if (lhbResult.status === "rejected") gaps.push("龙虎榜完整盘后表暂不可用");
   if (etfResult.status === "rejected") gaps.push("ETF当日成交行情暂不可用，保留最近可得数据");
-  if (lhb.status === "pending") gaps.push("当日完整龙虎榜尚未披露，将在19:35再次抓取");
+  if (lhb.status === "pending") gaps.push("当日完整龙虎榜尚未披露，将在后续17:30或19:00刷新继续抓取");
   if (margin.date !== targetDate) gaps.push(`两融为T+1披露，当前显示${margin.date || "最近可得"}数据`);
   if (breadthData.breadth.newHigh == null) gaps.push("历史新高/新低需全市场K线计算，云端快速版当前待补");
   if (macro.asOf !== targetDate) gaps.push(`宏观流动性显示${macro.asOf || "最近可得"}数据，未冒充当日`);
@@ -368,6 +409,12 @@ async function collect(previous) {
     { label: "两融余额", value: snapshot.margin.total, sub: snapshot.margin.date || "待披露", tone: "flat" },
     { label: "龙虎榜机构", value: snapshot.lhb.dayNet, sub: "亿元·当日窗口", tone: "market" },
   ];
+  if (snapshot.indices.length < 5 || snapshot.turnover == null || snapshot.turnover <= 0) {
+    throw new Error("Snapshot validation failed: index or turnover data incomplete");
+  }
+  if (snapshot.lhb.status === "complete" && (!Array.isArray(snapshot.lhb.buy) || !Array.isArray(snapshot.lhb.sell))) {
+    throw new Error("Snapshot validation failed: LHB detail arrays missing");
+  }
   return snapshot;
 }
 
