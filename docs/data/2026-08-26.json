@@ -1,0 +1,434 @@
+{
+  "date": "2026-08-26",
+  "quoteDate": "2026-08-26",
+  "updatedAt": "2026-08-27T03:26:31.000Z",
+  "status": "historical",
+  "indices": [
+    {
+      "code": "000001",
+      "name": "上证指数",
+      "close": 3912.52,
+      "pct": 0.59,
+      "amount": 8572.23
+    },
+    {
+      "code": "399001",
+      "name": "深证成指",
+      "close": 13841.33,
+      "pct": 0.69,
+      "amount": 9515
+    },
+    {
+      "code": "399006",
+      "name": "创业板指",
+      "close": 3414.88,
+      "pct": 0.51,
+      "amount": 4465.16
+    },
+    {
+      "code": "000688",
+      "name": "科创50",
+      "close": 1632.02,
+      "pct": 1.71,
+      "amount": null
+    },
+    {
+      "code": "000300",
+      "name": "沪深300",
+      "close": null,
+      "pct": 0.85,
+      "amount": null
+    }
+  ],
+  "turnover": 18087.23,
+  "breadth": {
+    "up": 2942,
+    "down": 2445,
+    "limitUp": 52,
+    "limitDown": 0,
+    "broken": 20
+  },
+  "flow": {
+    "topIn": [
+      {
+        "name": "洛阳钼业",
+        "value": 22.88
+      },
+      {
+        "name": "立讯精密",
+        "value": 12.58
+      }
+    ],
+    "topOut": [
+      {
+        "name": "长鑫科技",
+        "value": -8.03
+      },
+      {
+        "name": "天孚通信",
+        "value": -5.74
+      }
+    ],
+    "source": "既有复盘报告所列盘后主力资金口径"
+  },
+  "margin": {
+    "date": "2026-08-26",
+    "total": 26531.75,
+    "financing": 26250.54,
+    "lending": 281.21
+  },
+  "lhb": {
+    "status": "complete",
+    "billboardTotal": 57,
+    "institutionTotal": 28,
+    "buyCount": 11,
+    "sellCount": 17,
+    "dayNet": -3.89,
+    "buy": [
+      {
+        "code": "688828",
+        "name": "国仪公司",
+        "pct": 15.09,
+        "turnover": 39.59,
+        "instBuy": null,
+        "instSell": null,
+        "net": 6426.46,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日换手率达30%或日涨幅达15%"
+      },
+      {
+        "code": "300333",
+        "name": "兆日科技",
+        "pct": 16.75,
+        "turnover": 26.86,
+        "instBuy": null,
+        "instSell": null,
+        "net": 5551.01,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日涨幅达到15%"
+      },
+      {
+        "code": "000997",
+        "name": "新大陆",
+        "pct": 9.99,
+        "turnover": 8.97,
+        "instBuy": null,
+        "instSell": null,
+        "net": 5363.74,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日涨幅偏离值达到7%"
+      },
+      {
+        "code": "002412",
+        "name": "汉森制药",
+        "pct": 6.16,
+        "turnover": 37.11,
+        "instBuy": null,
+        "instSell": null,
+        "net": 3569.82,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日换手率达到20%"
+      },
+      {
+        "code": "002445",
+        "name": "中南文化",
+        "pct": -2.96,
+        "turnover": 16.93,
+        "instBuy": null,
+        "instSell": null,
+        "net": 3323.55,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日振幅值达到15%"
+      },
+      {
+        "code": "002667",
+        "name": "*ST威领",
+        "pct": -7.27,
+        "turnover": 11.87,
+        "instBuy": null,
+        "instSell": null,
+        "net": 1535.65,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日跌幅偏离值达到7%"
+      },
+      {
+        "code": "300647",
+        "name": "超频三",
+        "pct": 16.32,
+        "turnover": 17.78,
+        "instBuy": null,
+        "instSell": null,
+        "net": 692.63,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日涨幅达到15%"
+      },
+      {
+        "code": "603279",
+        "name": "景津装备",
+        "pct": -9.03,
+        "turnover": 5.33,
+        "instBuy": null,
+        "instSell": null,
+        "net": 268.21,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日跌幅偏离值达到7%"
+      },
+      {
+        "code": "002437",
+        "name": "誉衡药业",
+        "pct": -3.72,
+        "turnover": 29.93,
+        "instBuy": null,
+        "instSell": null,
+        "net": 239.78,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日换手率达到20%"
+      },
+      {
+        "code": "920093",
+        "name": "信胜科技",
+        "pct": 2.5,
+        "turnover": 26.96,
+        "instBuy": null,
+        "instSell": null,
+        "net": 126.98,
+        "ratio": null,
+        "window": "当日",
+        "reason": "当日换手率达到20%"
+      },
+      {
+        "code": "301177",
+        "name": "迪阿股份",
+        "pct": 20.01,
+        "turnover": 1.9,
+        "instBuy": null,
+        "instSell": null,
+        "net": 41.48,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日涨幅达到15%"
+      }
+    ],
+    "sell": [
+      {
+        "code": "301591",
+        "name": "肯特股份",
+        "pct": 5.47,
+        "turnover": 36.14,
+        "instBuy": null,
+        "instSell": null,
+        "net": -170.71,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日换手率达到30%"
+      },
+      {
+        "code": "301630",
+        "name": "同宇新材",
+        "pct": 20,
+        "turnover": 27.34,
+        "instBuy": null,
+        "instSell": null,
+        "net": -195.75,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日涨幅达到15%"
+      },
+      {
+        "code": "002581",
+        "name": "*ST未名",
+        "pct": -7.47,
+        "turnover": 4.66,
+        "instBuy": null,
+        "instSell": null,
+        "net": -333.54,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日跌幅偏离值达到7%"
+      },
+      {
+        "code": "920176",
+        "name": "维琪科技",
+        "pct": 5.38,
+        "turnover": 44.31,
+        "instBuy": null,
+        "instSell": null,
+        "net": -777.03,
+        "ratio": null,
+        "window": "当日",
+        "reason": "当日换手率达到20%"
+      },
+      {
+        "code": "001258",
+        "name": "立新能源",
+        "pct": 10.01,
+        "turnover": 13.54,
+        "instBuy": null,
+        "instSell": null,
+        "net": -1167.64,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日涨幅偏离值达到7%或日振幅值达到15%"
+      },
+      {
+        "code": "002867",
+        "name": "周大生",
+        "pct": -9.46,
+        "turnover": 3.24,
+        "instBuy": null,
+        "instSell": null,
+        "net": -2136.01,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日跌幅偏离值达到7%"
+      },
+      {
+        "code": "301117",
+        "name": "ST佳缘",
+        "pct": -8.32,
+        "turnover": 36.61,
+        "instBuy": null,
+        "instSell": null,
+        "net": -2601.07,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日换手率达到30%"
+      },
+      {
+        "code": "603516",
+        "name": "淳中科技",
+        "pct": -9.35,
+        "turnover": 5.83,
+        "instBuy": null,
+        "instSell": null,
+        "net": -2661.02,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日跌幅偏离值达到7%"
+      },
+      {
+        "code": "600508",
+        "name": "上海能源",
+        "pct": 5.34,
+        "turnover": 10.85,
+        "instBuy": null,
+        "instSell": null,
+        "net": -2676.74,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日振幅达到15%"
+      },
+      {
+        "code": "301516",
+        "name": "中远通",
+        "pct": -16.57,
+        "turnover": 44.06,
+        "instBuy": null,
+        "instSell": null,
+        "net": -3058.47,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日跌幅达到15%或日换手率达到30%"
+      },
+      {
+        "code": "003040",
+        "name": "楚天龙",
+        "pct": 10.01,
+        "turnover": 23.8,
+        "instBuy": null,
+        "instSell": null,
+        "net": -3548.15,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日涨幅偏离值达到7%"
+      },
+      {
+        "code": "002172",
+        "name": "澳洋健康",
+        "pct": 2.6,
+        "turnover": 35.33,
+        "instBuy": null,
+        "instSell": null,
+        "net": -3693.99,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日换手率达到20%"
+      },
+      {
+        "code": "301717",
+        "name": "超纯应材",
+        "pct": 7.5,
+        "turnover": 35.08,
+        "instBuy": null,
+        "instSell": null,
+        "net": -4108.01,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日换手率达到30%"
+      },
+      {
+        "code": "000017",
+        "name": "深中华A",
+        "pct": 10,
+        "turnover": 24.11,
+        "instBuy": null,
+        "instSell": null,
+        "net": -4338.76,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日涨幅偏离值达到7%"
+      },
+      {
+        "code": "002491",
+        "name": "通鼎互联",
+        "pct": 5.05,
+        "turnover": 28.84,
+        "instBuy": null,
+        "instSell": null,
+        "net": -6564.38,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日振幅达到15%或日换手率达到20%"
+      },
+      {
+        "code": "300626",
+        "name": "华瑞股份",
+        "pct": -17.24,
+        "turnover": 9,
+        "instBuy": null,
+        "instSell": null,
+        "net": -8656.53,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日跌幅达到15%"
+      },
+      {
+        "code": "605305",
+        "name": "中际联合",
+        "pct": -9.7,
+        "turnover": 6.72,
+        "instBuy": null,
+        "instSell": null,
+        "net": -19385.68,
+        "ratio": null,
+        "window": "当日",
+        "reason": "日跌幅偏离值达到7%"
+      }
+    ]
+  },
+  "gaps": [
+    "本页由当日已核验单文件报告导入，保留关键指标与已有龙虎榜明细"
+  ],
+  "sources": [
+    "本地归档的当日自包含复盘报告及其核验记录"
+  ]
+}
