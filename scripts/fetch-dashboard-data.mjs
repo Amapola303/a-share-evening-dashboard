@@ -3,6 +3,8 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 const dateFmt = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit" });
 const targetDate = process.env.REVIEW_DATE || dateFmt.format(new Date());
 const dataDir = new URL("../docs/data/", import.meta.url);
+const externalEtfDashboardUrl = "https://day-etf-dashboard.pages.dev/";
+const externalEtfDataUrl = `${externalEtfDashboardUrl}data.json`;
 const headers = {
   "user-agent": "Mozilla/5.0 (compatible; AShareEveningDashboard/2.1)",
   referer: "https://data.eastmoney.com/",
@@ -261,6 +263,57 @@ async function fetchEtf(previous) {
   };
 }
 
+async function fetchExternalEtfFlow() {
+  const payload = await getJson(`${externalEtfDataUrl}?v=${Date.now()}`, {
+    ...headers,
+    referer: externalEtfDashboardUrl,
+  });
+  if (!Array.isArray(payload?.etfs) || payload.etfs.length < 6) {
+    throw new Error("External ETF flow table incomplete");
+  }
+  const rows = payload.etfs.map((item) => {
+    const points = Array.isArray(item.flows) ? item.flows : [];
+    const latestPoint = points.length ? points[points.length - 1] : null;
+    return {
+      code: String(item.code || ""),
+      name: String(item.name || ""),
+      bucket: String(item.bucket || ""),
+      price: n(item.price),
+      pct: n(item.daily_change),
+      fundSize: item.fund_size == null ? null : round(Number(item.fund_size) / 1e8),
+      latestFlow: n(item.latest_flow),
+      dataDate: String(latestPoint?.date || ""),
+      yearInflow: n(item.total_inflow),
+      yearOutflow: n(item.total_outflow),
+    };
+  });
+  if (rows.some((item) => !item.code || !item.name || !item.bucket || item.latestFlow == null)) {
+    throw new Error("External ETF flow fields incomplete");
+  }
+  const positiveRows = rows.filter((item) => item.latestFlow > 0);
+  const negativeRows = rows.filter((item) => item.latestFlow < 0);
+  const dataDate = rows.map((item) => item.dataDate).filter(Boolean).sort().at(-1) || null;
+  const maxInflow = positiveRows.sort((a, b) => b.latestFlow - a.latestFlow)[0] || null;
+  const maxOutflow = negativeRows.sort((a, b) => a.latestFlow - b.latestFlow)[0] || null;
+  return {
+    status: "complete",
+    asOf: String(payload.as_of || dataDate || ""),
+    dataDate,
+    source: String(payload.data_source || "ETF资金流向看板"),
+    sourceUrl: externalEtfDashboardUrl,
+    scope: `${String(payload.note || "代表ETF场内流通份额变化估算净申赎")}；单位万份；6只合计为最新一期字段加总，不与成交额或主力资金混算`,
+    netFlow: round(rows.reduce((sum, item) => sum + item.latestFlow, 0), 0),
+    inflowTotal: round(positiveRows.reduce((sum, item) => sum + item.latestFlow, 0), 0),
+    outflowTotal: round(negativeRows.reduce((sum, item) => sum + item.latestFlow, 0), 0),
+    inflowCount: positiveRows.length,
+    outflowCount: negativeRows.length,
+    maxInflow,
+    maxOutflow,
+    yearNet: round(rows.reduce((sum, item) => sum + (item.yearInflow || 0) + (item.yearOutflow || 0), 0), 0),
+    rows,
+  };
+}
+
 function appendSeries(series, date, fields) {
   const current = structuredClone(series || { dates: [] });
   current.dates ||= [];
@@ -334,7 +387,7 @@ function automaticNarrative(snapshot) {
       s3: "两融为T+1披露，页面显示真实数据日期。",
       s4: "主力资金为平台算法，不同平台绝对额不可直接相加。",
       s5: "机构席位按证券与当日/3日窗口去重，净额只统计当日窗口。",
-      s6: "ETF成交额为当日；份额缺少稳定公开增量时保留最近可得日期。",
+      s6: "ETF成交额为当日；代表ETF份额资金温度来自外部ETF看板的Wind衍生数据，按其真实更新时间和数据点日期单独展示。",
       s7: "宏观数据未取得稳定公开增量时保留最近可得日期，不冒充当日。",
       s8: "次日情景为规则化观察框架，不是价格或收益预测。",
     },
@@ -343,8 +396,8 @@ function automaticNarrative(snapshot) {
 }
 
 async function collect(previous) {
-  const settled = await Promise.allSettled([fetchIndices(), fetchTencentVerification(), fetchBreadth(), fetchFlow(), fetchMargin(), fetchLhb(), fetchEtf(previous?.etf)]);
-  const [indexResult, verifyResult, breadthResult, flowResult, marginResult, lhbResult, etfResult] = settled;
+  const settled = await Promise.allSettled([fetchIndices(), fetchTencentVerification(), fetchBreadth(), fetchFlow(), fetchMargin(), fetchLhb(), fetchEtf(previous?.etf), fetchExternalEtfFlow()]);
+  const [indexResult, verifyResult, breadthResult, flowResult, marginResult, lhbResult, etfResult, etfWeeklyResult] = settled;
   const gaps = [];
   const indices = indexResult.status === "fulfilled" ? indexResult.value : { indices: [], quoteDate: null, turnover: null };
   const sameDayPrevious = previous?.date === targetDate ? previous : null;
@@ -362,6 +415,22 @@ async function collect(previous) {
     ? { ...sameDayPrevious.lhb, scope: `${sameDayPrevious.lhb.scope}；本次接口返回空，保留同交易日已核验完整表` }
     : fetchedLhb ?? sameDayPrevious?.lhb ?? { status: "partial", billboardTotal: null, institutionTotal: null, buyCount: null, sellCount: null, dayNet: null, buy: [], sell: [], scope: "接口暂不可用" };
   const etf = etfResult.status === "fulfilled" ? etfResult.value : previous?.etf ?? { rows: [], shareSeries: {}, asOf: null, source: "接口暂不可用" };
+  let etfWeekly = etfWeeklyResult.status === "fulfilled" ? etfWeeklyResult.value : previous?.etfWeekly
+    ? { ...previous.etfWeekly, status: "stale", scope: `${previous.etfWeekly.scope || "外部ETF资金流数据"}；本次读取失败，保留最近可得日期` }
+    : { status: "unavailable", asOf: null, dataDate: null, source: "ETF资金流向看板", sourceUrl: externalEtfDashboardUrl, scope: "公开数据文件暂不可用", netFlow: null, inflowTotal: null, outflowTotal: null, inflowCount: null, outflowCount: null, maxInflow: null, maxOutflow: null, yearNet: null, rows: [] };
+  const quoteMap = new Map((etf.rows || []).map((item) => [item.code, item]));
+  const priceChecks = (etfWeekly.rows || []).map((item) => {
+    const code = item.code.replace(/\.(SH|SZ)$/i, "");
+    const quote = quoteMap.get(code);
+    if (!quote || item.price == null || quote.close == null) return null;
+    return { code, priceDiff: round(Math.abs(item.price - quote.close), 4), pctDiff: item.pct == null || quote.pct == null ? null : round(Math.abs(item.pct - quote.pct), 4) };
+  }).filter(Boolean);
+  etfWeekly = {
+    ...etfWeekly,
+    verification: priceChecks.length
+      ? { status: "cross_checked", summary: `与东方财富ETF收盘行情交叉核验${priceChecks.length}只重合标的`, rows: priceChecks }
+      : { status: "single_source", summary: "份额净申赎为外部ETF看板Wind衍生口径；无可比公开第二来源，未与其他资金口径混算", rows: [] },
+  };
   const macro = carryMacro(previous?.macro);
   if (indexResult.status === "rejected") gaps.push("指数与成交额接口暂不可用");
   if (verifyResult.status === "rejected") gaps.push("腾讯行情二次核验接口暂不可用");
@@ -370,14 +439,16 @@ async function collect(previous) {
   if (marginResult.status === "rejected") gaps.push("两融最近披露值暂不可用");
   if (lhbResult.status === "rejected") gaps.push("龙虎榜完整盘后表暂不可用");
   if (etfResult.status === "rejected") gaps.push("ETF当日成交行情暂不可用，保留最近可得数据");
+  if (etfWeeklyResult.status === "rejected") gaps.push("ETF份额资金温度公开数据暂不可用，保留最近可得日期");
   if (lhb.status === "pending") gaps.push("当日完整龙虎榜尚未披露，将在后续17:30或19:00刷新继续抓取");
   if (margin.date !== targetDate) gaps.push(`两融为T+1披露，当前显示${margin.date || "最近可得"}数据`);
   if (breadthData.breadth.newHigh == null) gaps.push("历史新高/新低需全市场K线计算，云端快速版当前待补");
+  if (etfWeekly.dataDate && etfWeekly.dataDate !== targetDate) gaps.push(`ETF份额资金温度最近数据点为${etfWeekly.dataDate}，页面更新时间${etfWeekly.asOf || "最近可得"}`);
   if (macro.asOf !== targetDate) gaps.push(`宏观流动性显示${macro.asOf || "最近可得"}数据，未冒充当日`);
   const snapshot = {
     date: targetDate, quoteDate: indices.quoteDate, updatedAt: new Date().toISOString(), status: gaps.length ? "partial" : "fresh",
     indices: indices.indices, turnover: indices.turnover, breadth: breadthData.breadth, ladder: breadthData.ladder,
-    flow, margin, lhb, etf, macro, gaps,
+    flow, margin, lhb, etf, etfWeekly, macro, gaps,
     trends: {
       turnover: appendSeries(previous?.trends?.turnover, targetDate, { total: indices.turnover }),
       breadth: appendSeries(previous?.trends?.breadth, targetDate, { up_limit: breadthData.breadth.limitUp, down_limit: breadthData.breadth.limitDown, broken: breadthData.breadth.broken, new_high: breadthData.breadth.newHigh, new_low: breadthData.breadth.newLow }),
@@ -390,12 +461,14 @@ async function collect(previous) {
         indexPrimary: "东方财富盘后延迟行情",
         indexSecondary: verifyResult.status === "fulfilled" ? "腾讯行情已取得；差异由页面核验提示保留" : "腾讯行情暂不可用",
         lhb: "东方财富交易公开信息三表；机构席位按证券与窗口去重",
+        etfWeekly: etfWeekly.verification?.summary || "ETF份额资金温度按外部看板真实日期展示",
         disclosure: "两融、ETF份额和宏观数据分别标注真实as-of日期",
       },
     },
     sources: [
       "东方财富盘后延迟行情、涨跌停池、主力资金、两融与交易公开信息",
       "腾讯行情（指数二次核验）",
+      `ETF资金流向看板（${externalEtfDashboardUrl}，Wind衍生份额净申赎口径）`,
       "最近可得的人民银行/资金利率/债券收益率核验数据（宏观模块按真实日期保留）",
     ],
   };
