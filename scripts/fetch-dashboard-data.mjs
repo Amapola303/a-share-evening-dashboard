@@ -295,13 +295,14 @@ async function fetchExternalEtfFlow() {
   const dataDate = rows.map((item) => item.dataDate).filter(Boolean).sort().at(-1) || null;
   const maxInflow = positiveRows.sort((a, b) => b.latestFlow - a.latestFlow)[0] || null;
   const maxOutflow = negativeRows.sort((a, b) => a.latestFlow - b.latestFlow)[0] || null;
+  const sourceNote = String(payload.note || "代表ETF场内流通份额变化估算净申赎").replace(/[。；;]+$/u, "");
   return {
     status: "complete",
     asOf: String(payload.as_of || dataDate || ""),
     dataDate,
     source: String(payload.data_source || "ETF资金流向看板"),
     sourceUrl: externalEtfDashboardUrl,
-    scope: `${String(payload.note || "代表ETF场内流通份额变化估算净申赎")}；单位万份；6只合计为最新一期字段加总，不与成交额或主力资金混算`,
+    scope: `${sourceNote}；单位万份；6只合计为最新一期字段加总，不与成交额或主力资金混算`,
     netFlow: round(rows.reduce((sum, item) => sum + item.latestFlow, 0), 0),
     inflowTotal: round(positiveRows.reduce((sum, item) => sum + item.latestFlow, 0), 0),
     outflowTotal: round(negativeRows.reduce((sum, item) => sum + item.latestFlow, 0), 0),
