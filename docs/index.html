@@ -43,6 +43,8 @@
 
 <script>
   const $=id=>document.getElementById(id), esc=v=>String(v??'—').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])), plain=v=>String(v??'').replace(/<[^>]*>/g,'');
+  const publicDataBase='https://amapola303.github.io/a-share-evening-dashboard/data/';
+  const dataBase=location.protocol==='file:'?publicDataBase:'./data/';
   const num=(v,d=2)=>v==null||Number.isNaN(Number(v))?'—':Number(v).toLocaleString('zh-CN',{minimumFractionDigits:d,maximumFractionDigits:d});
   const signed=(v,s='',d=2)=>v==null?'—':`${Number(v)>0?'+':''}${num(v,d)}${s}`;
   const tone=v=>v==null?'':Number(v)>=0?'up':'down';
@@ -137,13 +139,13 @@
 
   async function loadDate(date){
     $('dateSelect').disabled=true;
-    try{const r=await fetch(`./data/${encodeURIComponent(date)}.json?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);const data=await r.json();render(data);history.replaceState(null,'',`?date=${encodeURIComponent(date)}`);document.title=`${date} A股资金面双端看板`;return true;}
+    try{const r=await fetch(`${dataBase}${encodeURIComponent(date)}.json?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);const data=await r.json();render(data);try{history.replaceState(null,'',`?date=${encodeURIComponent(date)}`);}catch{}document.title=`${date} A股资金面双端看板`;return true;}
     catch(error){$('title').textContent='该日期数据暂不可用';$('conclusion').textContent='页面没有使用旧值或猜测值，请稍后重试。';$('gaps').textContent=`读取失败：${error.message}`;return false;}
     finally{$('dateSelect').disabled=false;}
   }
 
   async function loadDashboard(preferLatest=false){
-    const r=await fetch(`./data/index.json?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);const list=await r.json();const requested=preferLatest?null:new URLSearchParams(location.search).get('date');const selected=list.some(x=>x.date===requested)?requested:list[0]?.date;$('dateSelect').innerHTML=list.map((x,i)=>`<option value="${esc(x.date)}" ${x.date===selected?'selected':''}>${esc(x.date)}${i===0?' · 最新':''}</option>`).join('');if(!selected)throw new Error('暂无日期索引');if(!await loadDate(selected))throw new Error('最新快照读取失败');
+    const r=await fetch(`${dataBase}index.json?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);const list=await r.json();const requested=preferLatest?null:new URLSearchParams(location.search).get('date');const selected=list.some(x=>x.date===requested)?requested:list[0]?.date;$('dateSelect').innerHTML=list.map((x,i)=>`<option value="${esc(x.date)}" ${x.date===selected?'selected':''}>${esc(x.date)}${i===0?' · 最新':''}</option>`).join('');if(!selected)throw new Error('暂无日期索引');if(!await loadDate(selected))throw new Error('最新快照读取失败');
   }
   async function start(){try{await loadDashboard(false);}catch{$('title').textContent='云端数据尚未生成';$('conclusion').textContent='未读取到日期索引，请稍后重试。';}}
   async function refreshNow(){const button=$('reload');button.disabled=true;button.textContent='正在刷新…';try{await loadDashboard(true);try{await refreshExternalEtfLive();button.textContent='刷新完成';}catch{button.textContent='主看板已刷新';}}catch{button.textContent='刷新失败，请重试';}finally{setTimeout(()=>{button.disabled=false;button.textContent='实时刷新页面数据';},1400);}}
