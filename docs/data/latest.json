@@ -1,80 +1,158 @@
 {
-  "date": "2026-11-20",
-  "quoteDate": "2026-11-20",
-  "updatedAt": "2026-11-20T12:11:53.999Z",
+  "date": "2026-11-23",
+  "quoteDate": "2026-11-23",
+  "updatedAt": "2026-11-23T13:40:08.235Z",
   "status": "partial",
   "indices": [
     {
       "code": "000001",
       "name": "上证指数",
-      "close": 3533.79,
-      "pct": -1.23,
-      "amount": 7025.74
+      "close": 3538.95,
+      "pct": 0.15,
+      "amount": 7385
     },
     {
       "code": "399001",
       "name": "深证成指",
-      "close": 10256.39,
-      "pct": -3.09,
-      "amount": 7196.27
+      "close": 10454.37,
+      "pct": 1.93,
+      "amount": 8143.8
     },
     {
       "code": "399006",
       "name": "创业板指",
-      "close": 2212.13,
-      "pct": -3.54,
-      "amount": 3388.18
+      "close": 2280.2,
+      "pct": 3.08,
+      "amount": 4046.09
     },
     {
       "code": "000688",
       "name": "科创50",
-      "close": 1231.09,
-      "pct": -3.12,
-      "amount": 919.45
+      "close": 1227.89,
+      "pct": -0.26,
+      "amount": 895.55
     },
     {
       "code": "000300",
       "name": "沪深300",
-      "close": 3954.57,
-      "pct": -0.76,
-      "amount": 4411.08
+      "close": 3958.29,
+      "pct": 0.09,
+      "amount": 4582.79
     }
   ],
-  "turnover": 14222.01,
+  "turnover": 15528.8,
   "breadth": {
-    "up": 301,
-    "down": 4961,
-    "limitUp": 28,
-    "limitUpAll": 28,
-    "limitDown": 58,
-    "limitDownAll": 58,
-    "broken": 7,
-    "brokenRate": 20,
+    "up": 4344,
+    "down": 806,
+    "limitUp": 146,
+    "limitUpAll": 146,
+    "limitDown": 3,
+    "limitDownAll": 3,
+    "broken": 24,
+    "brokenRate": 14.12,
     "newHigh": null,
     "newLow": null,
     "newHighRows": []
   },
   "ladder": {
     "status": "provisional",
-    "maxBoard": 4,
+    "maxBoard": 5,
     "rows": [
       {
         "code": "002771",
         "name": "真视通",
-        "board": 4,
+        "board": 5,
         "theme": "IT服务Ⅱ"
       },
       {
         "code": "603324",
         "name": "盛剑科技",
-        "board": 4,
+        "board": 5,
         "theme": "环保设备"
       },
       {
         "code": "002579",
         "name": "中京电子",
+        "board": 3,
+        "theme": "元件"
+      },
+      {
+        "code": "000530",
+        "name": "冰山冷热",
+        "board": 2,
+        "theme": "通用设备"
+      },
+      {
+        "code": "000593",
+        "name": "德龙汇能",
+        "board": 2,
+        "theme": "燃气Ⅱ"
+      },
+      {
+        "code": "002086",
+        "name": "东方海洋",
+        "board": 2,
+        "theme": "农产品加"
+      },
+      {
+        "code": "002199",
+        "name": "东晶电子",
         "board": 2,
         "theme": "元件"
+      },
+      {
+        "code": "002548",
+        "name": "金新农",
+        "board": 2,
+        "theme": "饲料"
+      },
+      {
+        "code": "002642",
+        "name": "荣联科技",
+        "board": 2,
+        "theme": "IT服务Ⅱ"
+      },
+      {
+        "code": "301313",
+        "name": "凡拓数创",
+        "board": 2,
+        "theme": "数字媒体"
+      },
+      {
+        "code": "600327",
+        "name": "大东方",
+        "board": 2,
+        "theme": "一般零售"
+      },
+      {
+        "code": "600467",
+        "name": "好当家",
+        "board": 2,
+        "theme": "渔业"
+      },
+      {
+        "code": "603004",
+        "name": "鼎龙科技",
+        "board": 2,
+        "theme": "化学制品"
+      },
+      {
+        "code": "603960",
+        "name": "克来机电",
+        "board": 2,
+        "theme": "汽车零部"
+      },
+      {
+        "code": "605018",
+        "name": "长华集团",
+        "board": 2,
+        "theme": "汽车零部"
+      },
+      {
+        "code": "605577",
+        "name": "龙版传媒",
+        "board": 2,
+        "theme": "出版"
       }
     ],
     "source": "东方财富涨停池盘后连板字段；在线快照口径，完整报告仍需严格K线逐只复核"
@@ -85,36 +163,36 @@
         "title": "行业主力 · 净流入",
         "rows": [
           {
-            "name": "印制电路板",
-            "value": 20.39
+            "name": "电子",
+            "value": 69.21
+          },
+          {
+            "name": "通信设备",
+            "value": 69.15
+          },
+          {
+            "name": "通信",
+            "value": 68.49
+          },
+          {
+            "name": "通信网络设备及器件",
+            "value": 64.61
           },
           {
             "name": "元件",
-            "value": 18.72
+            "value": 54.33
           },
           {
-            "name": "制冷空调设备",
-            "value": 7.08
+            "name": "印制电路板",
+            "value": 48.03
           },
           {
-            "name": "其他数字媒体",
-            "value": 5.08
+            "name": "机械设备",
+            "value": 26.08
           },
           {
-            "name": "其他农产品加工",
-            "value": 5.02
-          },
-          {
-            "name": "白酒Ⅲ",
-            "value": 4.88
-          },
-          {
-            "name": "白酒Ⅱ",
-            "value": 4.88
-          },
-          {
-            "name": "农产品加工",
-            "value": 4.36
+            "name": "汽车零部件",
+            "value": 23.15
           }
         ]
       },
@@ -122,36 +200,36 @@
         "title": "行业主力 · 净流出",
         "rows": [
           {
-            "name": "电子",
-            "value": -130.35
-          },
-          {
-            "name": "半导体",
-            "value": -109.45
-          },
-          {
-            "name": "数字芯片设计",
-            "value": -63.17
-          },
-          {
-            "name": "电力设备",
-            "value": -45.46
-          },
-          {
-            "name": "医药生物",
-            "value": -42.48
-          },
-          {
             "name": "计算机",
-            "value": -39.81
+            "value": -4.45
           },
           {
-            "name": "机械设备",
-            "value": -31.38
+            "name": "半导体设备",
+            "value": -4.32
           },
           {
-            "name": "有色金属",
-            "value": -30.91
+            "name": "半导体材料",
+            "value": -4.21
+          },
+          {
+            "name": "IT服务Ⅱ",
+            "value": -3.99
+          },
+          {
+            "name": "IT服务Ⅲ",
+            "value": -3.99
+          },
+          {
+            "name": "白色家电",
+            "value": -3.88
+          },
+          {
+            "name": "医疗器械",
+            "value": -3.67
+          },
+          {
+            "name": "计算机设备",
+            "value": -3.62
           }
         ]
       },
@@ -159,36 +237,36 @@
         "title": "个股主力 · 净流入",
         "rows": [
           {
-            "name": "冰山冷热",
-            "value": 8.93
-          },
-          {
             "name": "新易盛",
-            "value": 8.34
+            "value": 22.94
           },
           {
-            "name": "紫金矿业",
-            "value": 8.2
+            "name": "中际旭创",
+            "value": 22.23
           },
           {
-            "name": "超声电子",
-            "value": 8.11
+            "name": "天孚通信",
+            "value": 14.13
           },
           {
-            "name": "贵州茅台",
-            "value": 7.97
+            "name": "九阳股份",
+            "value": 8.86
           },
           {
-            "name": "东方海洋",
-            "value": 5.63
+            "name": "东山精密",
+            "value": 8.42
           },
           {
-            "name": "长江电力",
-            "value": 4.75
+            "name": "胜宏科技",
+            "value": 7.41
           },
           {
-            "name": "中国平安",
-            "value": 4.66
+            "name": "宇树科技-W",
+            "value": 5.82
+          },
+          {
+            "name": "生益科技",
+            "value": 4.95
           }
         ]
       },
@@ -196,36 +274,36 @@
         "title": "个股主力 · 净流出",
         "rows": [
           {
-            "name": "长鑫科技",
-            "value": -19.17
+            "name": "华胜天成",
+            "value": -3.88
+          },
+          {
+            "name": "建设银行",
+            "value": -2.85
+          },
+          {
+            "name": "比亚迪",
+            "value": -2.57
           },
           {
             "name": "浪潮信息",
-            "value": -7.29
+            "value": -2.49
           },
           {
-            "name": "兆易创新",
-            "value": -7.25
+            "name": "超声电子",
+            "value": -2.48
           },
           {
-            "name": "九阳股份",
-            "value": -6.9
+            "name": "华微电子",
+            "value": -2.2
           },
           {
-            "name": "东山精密",
-            "value": -6.42
+            "name": "文投控股",
+            "value": -2.14
           },
           {
-            "name": "长电科技",
-            "value": -6.37
-          },
-          {
-            "name": "通富微电",
-            "value": -6.32
-          },
-          {
-            "name": "招商银行",
-            "value": -5.31
+            "name": "长川科技",
+            "value": -2.06
           }
         ]
       }
@@ -234,429 +312,573 @@
     "scope": "平台算法口径，行业与个股绝对额不可与其他平台直接相加"
   },
   "margin": {
-    "date": "2026-11-19",
-    "total": 22222.85,
-    "financing": 21927.43,
-    "lending": 295.42,
-    "change": -155.45
+    "date": "2026-11-20",
+    "total": 21797.96,
+    "financing": 21508.62,
+    "lending": 289.34,
+    "change": -424.89
   },
   "lhb": {
     "status": "complete",
-    "billboardTotal": 61,
-    "institutionTotal": 31,
-    "buyCount": 14,
-    "sellCount": 10,
-    "dayNet": -2.05,
+    "billboardTotal": 68,
+    "institutionTotal": 41,
+    "buyCount": 20,
+    "sellCount": 15,
+    "dayNet": 3.23,
     "buy": [
       {
-        "code": "301313",
-        "name": "凡拓数创",
-        "pct": 20,
-        "turnover": 34.9006,
-        "instBuy": 23346.22,
-        "instSell": 14624.63,
-        "net": 8721.59,
-        "ratio": 5.85,
-        "window": "当日",
-        "reason": "日换手率达到30%的前5只证券"
-      },
-      {
-        "code": "000889",
-        "name": "中嘉博创",
-        "pct": -1.3966,
-        "turnover": 23.4644,
-        "instBuy": 12482.09,
-        "instSell": 4460.52,
-        "net": 8021.56,
-        "ratio": 11.21,
-        "window": "当日",
-        "reason": "日振幅值达到15%的前5只证券"
+        "code": "000530",
+        "name": "冰山冷热",
+        "pct": 10.0081,
+        "turnover": 37.309,
+        "instBuy": 29023.97,
+        "instSell": 0,
+        "net": 29023.97,
+        "ratio": 4.88,
+        "window": "3日",
+        "reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券"
       },
       {
         "code": "000530",
         "name": "冰山冷热",
-        "pct": 10.0269,
-        "turnover": 42.6427,
-        "instBuy": 6577.13,
+        "pct": 10.0081,
+        "turnover": 37.309,
+        "instBuy": 20866.09,
+        "instSell": 4981.6,
+        "net": 15884.49,
+        "ratio": 5.5,
+        "window": "当日",
+        "reason": "日涨幅偏离值达到7%的前5只证券"
+      },
+      {
+        "code": "688836",
+        "name": "宇树科技",
+        "pct": 20,
+        "turnover": 23.9923,
+        "instBuy": 12547.92,
         "instSell": 0,
-        "net": 6577.13,
-        "ratio": 2.15,
+        "net": 12547.92,
+        "ratio": 2.68,
+        "window": "当日",
+        "reason": "有价格涨跌幅限制的日收盘价格涨幅达到15%的前五只证券"
+      },
+      {
+        "code": "002242",
+        "name": "九阳股份",
+        "pct": 10.0138,
+        "turnover": 10.6231,
+        "instBuy": 14333.17,
+        "instSell": 3535.36,
+        "net": 10797.81,
+        "ratio": 4.29,
+        "window": "当日",
+        "reason": "日涨幅偏离值达到7%的前5只证券"
+      },
+      {
+        "code": "300006",
+        "name": "莱美药业",
+        "pct": 20.0549,
+        "turnover": 20.1872,
+        "instBuy": 8843.29,
+        "instSell": 0,
+        "net": 8843.29,
+        "ratio": 5.19,
+        "window": "当日",
+        "reason": "日涨幅达到15%的前5只证券"
+      },
+      {
+        "code": "300829",
+        "name": "金丹科技",
+        "pct": 20,
+        "turnover": 26.3913,
+        "instBuy": 14973.61,
+        "instSell": 7769.36,
+        "net": 7204.25,
+        "ratio": 5.31,
+        "window": "当日",
+        "reason": "日涨幅达到15%的前5只证券"
+      },
+      {
+        "code": "002811",
+        "name": "郑中设计",
+        "pct": 2.459,
+        "turnover": 14.4165,
+        "instBuy": 7932.22,
+        "instSell": 1360.71,
+        "net": 6571.51,
+        "ratio": 11.24,
+        "window": "当日",
+        "reason": "日振幅值达到15%的前5只证券"
+      },
+      {
+        "code": "002579",
+        "name": "中京电子",
+        "pct": 10.0075,
+        "turnover": 30.3364,
+        "instBuy": 8155.76,
+        "instSell": 2967.17,
+        "net": 5188.59,
+        "ratio": 2.01,
+        "window": "当日",
+        "reason": "日换手率达到20%的前5只证券"
+      },
+      {
+        "code": "002046",
+        "name": "国机精工",
+        "pct": 10.0072,
+        "turnover": 5.8885,
+        "instBuy": 7388.55,
+        "instSell": 2801.18,
+        "net": 4587.37,
+        "ratio": 5.08,
+        "window": "当日",
+        "reason": "日振幅值达到15%的前5只证券"
+      },
+      {
+        "code": "002843",
+        "name": "泰嘉股份",
+        "pct": -6.4057,
+        "turnover": 17.4137,
+        "instBuy": 9113.08,
+        "instSell": 4973.46,
+        "net": 4139.62,
+        "ratio": 2.37,
+        "window": "3日",
+        "reason": "连续三个交易日内，跌幅偏离值累计达到20%的证券"
+      },
+      {
+        "code": "000766",
+        "name": "通化金马",
+        "pct": 10.0402,
+        "turnover": 5.684,
+        "instBuy": 5670.7,
+        "instSell": 2204.44,
+        "net": 3466.26,
+        "ratio": 6.23,
+        "window": "当日",
+        "reason": "日振幅值达到15%的前5只证券"
+      },
+      {
+        "code": "000636",
+        "name": "风华高科",
+        "pct": 10.019,
+        "turnover": 7.3242,
+        "instBuy": 16162.36,
+        "instSell": 13192.38,
+        "net": 2969.98,
+        "ratio": 1.28,
+        "window": "当日",
+        "reason": "日涨幅偏离值达到7%的前5只证券"
+      },
+      {
+        "code": "603151",
+        "name": "邦基科技",
+        "pct": 9.9945,
+        "turnover": 4.6293,
+        "instBuy": 2598.77,
+        "instSell": 0,
+        "net": 2598.77,
+        "ratio": 17.37,
+        "window": "当日",
+        "reason": "有价格涨跌幅限制的日价格振幅达到15%的前五只证券"
+      },
+      {
+        "code": "001358",
+        "name": "兴欣新材",
+        "pct": 10.019,
+        "turnover": 25.0137,
+        "instBuy": 5343.66,
+        "instSell": 2940.11,
+        "net": 2403.55,
+        "ratio": 7.06,
+        "window": "当日",
+        "reason": "日振幅值达到15%的前5只证券"
+      },
+      {
+        "code": "002642",
+        "name": "荣联科技",
+        "pct": 10.0551,
+        "turnover": 5.9563,
+        "instBuy": 2397,
+        "instSell": 0,
+        "net": 2397,
+        "ratio": 5.11,
+        "window": "3日",
+        "reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券"
+      },
+      {
+        "code": "920690",
+        "name": "捷众科技",
+        "pct": 29.9885,
+        "turnover": 17.0505,
+        "instBuy": 2837.27,
+        "instSell": 1273.18,
+        "net": 1564.09,
+        "ratio": 3.68,
+        "window": "3日",
+        "reason": "北交所股票连续3个交易日内日收盘价涨跌幅偏离值累计达到+40%(-40%)"
+      },
+      {
+        "code": "301052",
+        "name": "果麦文化",
+        "pct": 20,
+        "turnover": 45.9576,
+        "instBuy": 33925.28,
+        "instSell": 32836.72,
+        "net": 1088.56,
+        "ratio": 0.41,
+        "window": "3日",
+        "reason": "连续三个交易日内，涨幅偏离值累计达到30%的证券"
+      },
+      {
+        "code": "002148",
+        "name": "北纬科技",
+        "pct": 10.0398,
+        "turnover": 40.4973,
+        "instBuy": 5598.34,
+        "instSell": 4517.29,
+        "net": 1081.05,
+        "ratio": 0.55,
+        "window": "当日",
+        "reason": "日换手率达到20%的前5只证券"
+      },
+      {
+        "code": "688787",
+        "name": "海天瑞声",
+        "pct": 20,
+        "turnover": 15.5596,
+        "instBuy": 2301.6,
+        "instSell": 1494.36,
+        "net": 807.23,
+        "ratio": 0.9,
+        "window": "当日",
+        "reason": "有价格涨跌幅限制的日收盘价格涨幅达到15%的前五只证券"
+      },
+      {
+        "code": "920690",
+        "name": "捷众科技",
+        "pct": 29.9885,
+        "turnover": 17.0505,
+        "instBuy": 617.84,
+        "instSell": 0,
+        "net": 617.84,
+        "ratio": 3.2,
+        "window": "当日",
+        "reason": "当日价格振幅达到30%的前5只股票"
+      },
+      {
+        "code": "301697",
+        "name": "贝特利",
+        "pct": 10.8597,
+        "turnover": 36.5952,
+        "instBuy": 3781.48,
+        "instSell": 3251.41,
+        "net": 530.07,
+        "ratio": 1.29,
+        "window": "当日",
+        "reason": "日换手率达到30%的前5只证券"
+      },
+      {
+        "code": "920157",
+        "name": "宇特光电",
+        "pct": 17.1757,
+        "turnover": 41.0541,
+        "instBuy": 1286.91,
+        "instSell": 806.81,
+        "net": 480.1,
+        "ratio": 1.78,
+        "window": "当日",
+        "reason": "当日价格振幅达到30%的前5只股票"
+      },
+      {
+        "code": "603358",
+        "name": "华达科技",
+        "pct": -10.004,
+        "turnover": 0.6124,
+        "instBuy": 301.19,
+        "instSell": 0,
+        "net": 301.19,
+        "ratio": 4.77,
+        "window": "当日",
+        "reason": "有价格涨跌幅限制的日收盘价格跌幅偏离值达到7%的前五只证券"
+      },
+      {
+        "code": "000823",
+        "name": "超声电子",
+        "pct": 7.4554,
+        "turnover": 33.99,
+        "instBuy": 15235.21,
+        "instSell": 14979.27,
+        "net": 255.94,
+        "ratio": 0.07,
+        "window": "当日",
+        "reason": "日换手率达到20%的前5只证券"
+      },
+      {
+        "code": "000488",
+        "name": "ST晨鸣",
+        "pct": -6.875,
+        "turnover": 1.7758,
+        "instBuy": 163.79,
+        "instSell": 0,
+        "net": 163.79,
+        "ratio": 3.65,
+        "window": "当日",
+        "reason": "日跌幅偏离值达到7%的前5只证券"
+      }
+    ],
+    "sell": [
+      {
+        "code": "000678",
+        "name": "襄阳轴承",
+        "pct": 10.0118,
+        "turnover": 29.9391,
+        "instBuy": 30032.3,
+        "instSell": 57733.83,
+        "net": -27701.53,
+        "ratio": -3.68,
+        "window": "3日",
+        "reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券"
+      },
+      {
+        "code": "301660",
+        "name": "粤芯半导体",
+        "pct": 4.541,
+        "turnover": 33.9302,
+        "instBuy": 8201.49,
+        "instSell": 23694.55,
+        "net": -15493.07,
+        "ratio": -6.1,
+        "window": "当日",
+        "reason": "日换手率达到30%的前5只证券"
+      },
+      {
+        "code": "000678",
+        "name": "襄阳轴承",
+        "pct": 10.0118,
+        "turnover": 29.9391,
+        "instBuy": 6000.72,
+        "instSell": 13915.55,
+        "net": -7914.83,
+        "ratio": -3.23,
+        "window": "当日",
+        "reason": "日涨幅偏离值达到7%的前5只证券"
+      },
+      {
+        "code": "301313",
+        "name": "凡拓数创",
+        "pct": 19.9966,
+        "turnover": 33.7766,
+        "instBuy": 19577.34,
+        "instSell": 27379.98,
+        "net": -7802.64,
+        "ratio": -4.48,
+        "window": "当日",
+        "reason": "日换手率达到30%的前5只证券"
+      },
+      {
+        "code": "301218",
+        "name": "华是科技",
+        "pct": 20,
+        "turnover": 28.8365,
+        "instBuy": 21348.69,
+        "instSell": 27791.38,
+        "net": -6442.7,
+        "ratio": -3.99,
+        "window": "当日",
+        "reason": "日涨幅达到15%的前5只证券"
+      },
+      {
+        "code": "002771",
+        "name": "真视通",
+        "pct": 9.9874,
+        "turnover": 60.4067,
+        "instBuy": 0,
+        "instSell": 6106.26,
+        "net": -6106.26,
+        "ratio": -3.3,
         "window": "当日",
         "reason": "日换手率达到20%的前5只证券"
       },
       {
         "code": "301583",
         "name": "托伦斯",
-        "pct": 1.7463,
-        "turnover": 35.5803,
-        "instBuy": 6380.62,
-        "instSell": 1077.06,
-        "net": 5303.56,
-        "ratio": 4.37,
+        "pct": 7.9358,
+        "turnover": 36.8926,
+        "instBuy": 1566.96,
+        "instSell": 6292.93,
+        "net": -4725.96,
+        "ratio": -3.78,
         "window": "当日",
         "reason": "日换手率达到30%的前5只证券"
       },
       {
-        "code": "000823",
-        "name": "超声电子",
-        "pct": 9.9822,
-        "turnover": 19.9516,
-        "instBuy": 7052.61,
-        "instSell": 2725.15,
-        "net": 4327.46,
-        "ratio": 2.03,
-        "window": "当日",
-        "reason": "日涨幅偏离值达到7%的前5只证券"
+        "code": "301313",
+        "name": "凡拓数创",
+        "pct": 19.9966,
+        "turnover": 33.7766,
+        "instBuy": 40045.14,
+        "instSell": 43779.85,
+        "net": -3734.71,
+        "ratio": -1.16,
+        "window": "3日",
+        "reason": "连续三个交易日内，涨幅偏离值累计达到30%的证券"
       },
       {
-        "code": "002148",
-        "name": "北纬科技",
-        "pct": 8.172,
-        "turnover": 51.9487,
-        "instBuy": 4314.29,
-        "instSell": 0,
-        "net": 4314.29,
-        "ratio": 1.88,
-        "window": "当日",
-        "reason": "日换手率达到20%的前5只证券"
-      },
-      {
-        "code": "301209",
-        "name": "联合化学",
-        "pct": -19.9931,
-        "turnover": 13.7516,
-        "instBuy": 5236.23,
-        "instSell": 1703.32,
-        "net": 3532.92,
-        "ratio": 3.84,
-        "window": "当日",
-        "reason": "日跌幅达到15%的前5只证券"
-      },
-      {
-        "code": "000889",
-        "name": "中嘉博创",
-        "pct": -1.3966,
-        "turnover": 23.4644,
-        "instBuy": 17726.13,
-        "instSell": 14675.62,
-        "net": 3050.51,
-        "ratio": 1.75,
+        "code": "002199",
+        "name": "东晶电子",
+        "pct": 10.0529,
+        "turnover": 9.5165,
+        "instBuy": 552.4,
+        "instSell": 3495.82,
+        "net": -2943.41,
+        "ratio": -11.27,
         "window": "3日",
         "reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券"
-      },
-      {
-        "code": "300706",
-        "name": "阿石创",
-        "pct": -17.2262,
-        "turnover": 15.9446,
-        "instBuy": 2638.68,
-        "instSell": 1249.68,
-        "net": 1388.99,
-        "ratio": 2.1,
-        "window": "当日",
-        "reason": "日跌幅达到15%的前5只证券"
-      },
-      {
-        "code": "002343",
-        "name": "慈文传媒",
-        "pct": -9.2141,
-        "turnover": 30.6558,
-        "instBuy": 1253.79,
-        "instSell": 0,
-        "net": 1253.79,
-        "ratio": 1.27,
-        "window": "当日",
-        "reason": "日换手率达到20%的前5只证券"
       },
       {
         "code": "301052",
         "name": "果麦文化",
-        "pct": 11.9221,
-        "turnover": 42.6489,
-        "instBuy": 16679.11,
-        "instSell": 15646.13,
-        "net": 1032.98,
-        "ratio": 0.86,
+        "pct": 20,
+        "turnover": 45.9576,
+        "instBuy": 15649.68,
+        "instSell": 18002.17,
+        "net": -2352.49,
+        "ratio": -1.6,
         "window": "当日",
-        "reason": "日换手率达到30%的前5只证券"
+        "reason": "日涨幅达到15%的前5只证券"
+      },
+      {
+        "code": "002548",
+        "name": "金新农",
+        "pct": 10.1064,
+        "turnover": 15.7858,
+        "instBuy": 5487.38,
+        "instSell": 7541.39,
+        "net": -2054.02,
+        "ratio": -2.79,
+        "window": "3日",
+        "reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券"
+      },
+      {
+        "code": "002746",
+        "name": "仙坛股份",
+        "pct": -6.88,
+        "turnover": 4.7457,
+        "instBuy": 2460.46,
+        "instSell": 4268.65,
+        "net": -1808.2,
+        "ratio": -9.08,
+        "window": "当日",
+        "reason": "日跌幅偏离值达到7%的前5只证券"
       },
       {
         "code": "920309",
         "name": "菊乐股份",
-        "pct": -6.6185,
-        "turnover": 31.4013,
-        "instBuy": 802.84,
-        "instSell": 0,
-        "net": 802.84,
-        "ratio": 7.38,
+        "pct": 6.6111,
+        "turnover": 31.5806,
+        "instBuy": 0,
+        "instSell": 779.46,
+        "net": -779.46,
+        "ratio": -7.06,
         "window": "当日",
         "reason": "当日换手率达到20%的前5只股票"
       },
       {
-        "code": "920157",
-        "name": "宇特光电",
-        "pct": -17.2581,
-        "turnover": 33.997,
-        "instBuy": 1541.75,
-        "instSell": 959.11,
-        "net": 582.63,
-        "ratio": 2.64,
-        "window": "当日",
-        "reason": "当日换手率达到20%的前5只股票"
-      },
-      {
-        "code": "002579",
-        "name": "中京电子",
-        "pct": 10.0247,
-        "turnover": 12.9673,
-        "instBuy": 2162.98,
-        "instSell": 1597.21,
-        "net": 565.77,
-        "ratio": 0.57,
-        "window": "当日",
-        "reason": "日涨幅偏离值达到7%的前5只证券"
-      },
-      {
-        "code": "002453",
-        "name": "华软科技",
-        "pct": -0.463,
-        "turnover": 10.9103,
-        "instBuy": 2257.24,
-        "instSell": 1962.68,
-        "net": 294.56,
-        "ratio": 0.96,
+        "code": "002535",
+        "name": "林州重机",
+        "pct": 3.2787,
+        "turnover": 16.9669,
+        "instBuy": 903.38,
+        "instSell": 1628.02,
+        "net": -724.65,
+        "ratio": -2.51,
         "window": "当日",
         "reason": "日振幅值达到15%的前5只证券"
-      }
-    ],
-    "sell": [
-      {
-        "code": "600316",
-        "name": "洪都航空",
-        "pct": -10.0137,
-        "turnover": 3.5317,
-        "instBuy": 6139.86,
-        "instSell": 28572.72,
-        "net": -22432.86,
-        "ratio": -32.86,
-        "window": "当日",
-        "reason": "有价格涨跌幅限制的日收盘价格跌幅偏离值达到7%的前五只证券"
       },
       {
-        "code": "301660",
-        "name": "粤芯半导体",
-        "pct": 1.9654,
-        "turnover": 34.2774,
-        "instBuy": 12111.04,
-        "instSell": 34308.03,
-        "net": -22196.98,
-        "ratio": -8.66,
-        "window": "当日",
-        "reason": "日换手率达到30%的前5只证券"
-      },
-      {
-        "code": "002425",
-        "name": "凯撒文化",
-        "pct": -10.0796,
-        "turnover": 27.4595,
-        "instBuy": 4475.2,
-        "instSell": 16207.39,
-        "net": -11732.18,
-        "ratio": -3.89,
-        "window": "3日",
-        "reason": "连续三个交易日内，跌幅偏离值累计达到20%的证券"
-      },
-      {
-        "code": "002916",
-        "name": "深南电路",
-        "pct": -0.587,
-        "turnover": 2.9643,
-        "instBuy": 62984.44,
-        "instSell": 72906.07,
-        "net": -9921.63,
-        "ratio": -0.92,
+        "code": "000593",
+        "name": "德龙汇能",
+        "pct": 9.9943,
+        "turnover": 1.0844,
+        "instBuy": 901.79,
+        "instSell": 1364.33,
+        "net": -462.54,
+        "ratio": -1.87,
         "window": "3日",
         "reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券"
       },
       {
-        "code": "000678",
-        "name": "襄阳轴承",
-        "pct": 1.4337,
-        "turnover": 33.2761,
-        "instBuy": 10812.95,
-        "instSell": 19319.41,
-        "net": -8506.46,
-        "ratio": -3.23,
-        "window": "当日",
-        "reason": "日换手率达到20%的前5只证券"
-      },
-      {
-        "code": "603151",
-        "name": "邦基科技",
-        "pct": -9.9803,
-        "turnover": 3.9704,
-        "instBuy": 1339.97,
-        "instSell": 6229.43,
-        "net": -4889.46,
-        "ratio": -12.84,
-        "window": "3日",
-        "reason": "非S证券连续三个交易日内收盘价格跌幅偏离值累计达到20%的证券"
-      },
-      {
-        "code": "301132",
-        "name": "满坤科技",
-        "pct": 19.9953,
-        "turnover": 18.7829,
-        "instBuy": 1998.56,
-        "instSell": 6286.51,
-        "net": -4287.96,
-        "ratio": -5.03,
-        "window": "当日",
-        "reason": "日涨幅达到15%的前5只证券"
-      },
-      {
-        "code": "301096",
-        "name": "百诚医药",
-        "pct": -16.6667,
-        "turnover": 13.5064,
-        "instBuy": 2664.07,
-        "instSell": 6888.18,
-        "net": -4224.11,
-        "ratio": -13.26,
-        "window": "当日",
-        "reason": "日跌幅达到15%的前5只证券"
-      },
-      {
-        "code": "002771",
-        "name": "真视通",
-        "pct": 10.0139,
-        "turnover": 17.5951,
+        "code": "603037",
+        "name": "凯众股份",
+        "pct": 10.0418,
+        "turnover": 6.4032,
         "instBuy": 0,
-        "instSell": 3720.8,
-        "net": -3720.8,
-        "ratio": -6.76,
-        "window": "3日",
-        "reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券"
-      },
-      {
-        "code": "002579",
-        "name": "中京电子",
-        "pct": 10.0247,
-        "turnover": 12.9673,
-        "instBuy": 3255.56,
-        "instSell": 6669.98,
-        "net": -3414.42,
-        "ratio": -1.79,
-        "window": "3日",
-        "reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券"
-      },
-      {
-        "code": "301578",
-        "name": "辰奕智能",
-        "pct": -16.6512,
-        "turnover": 35.2628,
-        "instBuy": 5755,
-        "instSell": 8605.4,
-        "net": -2850.4,
-        "ratio": -9.4,
+        "instSell": 417.25,
+        "net": -417.25,
+        "ratio": -2.44,
         "window": "当日",
-        "reason": "日跌幅达到15%的前5只证券"
+        "reason": "有价格涨跌幅限制的日收盘价格涨幅偏离值达到7%的前五只证券"
       },
       {
-        "code": "300812",
-        "name": "易天股份",
-        "pct": 20,
-        "turnover": 16.2489,
-        "instBuy": 4708.12,
-        "instSell": 7406.24,
-        "net": -2698.12,
-        "ratio": -3.85,
-        "window": "3日",
-        "reason": "连续三个交易日内，涨幅偏离值累计达到30%的证券"
-      },
-      {
-        "code": "603324",
-        "name": "盛剑科技",
-        "pct": 10.004,
-        "turnover": 17.1433,
+        "code": "603960",
+        "name": "克来机电",
+        "pct": 10.0215,
+        "turnover": 0.9216,
         "instBuy": 0,
-        "instSell": 2606.55,
-        "net": -2606.55,
-        "ratio": -2.84,
+        "instSell": 393.83,
+        "net": -393.83,
+        "ratio": -2.98,
         "window": "3日",
         "reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券"
       },
       {
-        "code": "300812",
-        "name": "易天股份",
-        "pct": 20,
-        "turnover": 16.2489,
-        "instBuy": 1701.63,
-        "instSell": 3592.82,
-        "net": -1891.19,
-        "ratio": -3.76,
+        "code": "000610",
+        "name": "*ST西旅",
+        "pct": -9.543,
+        "turnover": 3.601,
+        "instBuy": 208.62,
+        "instSell": 355.01,
+        "net": -146.39,
+        "ratio": -2.52,
         "window": "当日",
-        "reason": "日涨幅达到15%的前5只证券"
+        "reason": "日跌幅偏离值达到7%的前5只证券"
       },
       {
-        "code": "603099",
-        "name": "长白山",
-        "pct": -9.8317,
-        "turnover": 4.2265,
+        "code": "002620",
+        "name": "*ST瑞和",
+        "pct": -10.0179,
+        "turnover": 4.2052,
         "instBuy": 0,
-        "instSell": 1791.13,
-        "net": -1791.13,
-        "ratio": -1.96,
-        "window": "3日",
-        "reason": "非S证券连续三个交易日内收盘价格跌幅偏离值累计达到20%的证券"
+        "instSell": 145.17,
+        "net": -145.17,
+        "ratio": -2.15,
+        "window": "当日",
+        "reason": "日跌幅偏离值达到7%的前5只证券"
       },
       {
-        "code": "301030",
-        "name": "*ST仕净",
-        "pct": 14.2361,
-        "turnover": 19.7033,
+        "code": "920223",
+        "name": "荣亿精密",
+        "pct": 17.4251,
+        "turnover": 10.2033,
+        "instBuy": 231.02,
+        "instSell": 345.83,
+        "net": -114.81,
+        "ratio": -1.31,
+        "window": "当日",
+        "reason": "当日价格振幅达到30%的前5只股票"
+      },
+      {
+        "code": "002694",
+        "name": "*ST顾地",
+        "pct": -7.9872,
+        "turnover": 0.8093,
         "instBuy": 0,
-        "instSell": 657.48,
-        "net": -657.48,
-        "ratio": -3.54,
-        "window": "3日",
-        "reason": "连续三个交易日内，涨幅偏离值累计达到30%的证券"
-      },
-      {
-        "code": "002420",
-        "name": "毅昌科技",
-        "pct": -9.8131,
-        "turnover": 17.2312,
-        "instBuy": 1407.55,
-        "instSell": 1983.46,
-        "net": -575.91,
-        "ratio": -1.32,
+        "instSell": 60.01,
+        "net": -60.01,
+        "ratio": -3.52,
         "window": "当日",
-        "reason": "日振幅值达到15%的前5只证券"
-      },
-      {
-        "code": "000607",
-        "name": "华媒控股",
-        "pct": 10.0295,
-        "turnover": 5.395,
-        "instBuy": 2247.37,
-        "instSell": 2469.9,
-        "net": -222.53,
-        "ratio": -1.37,
-        "window": "当日",
-        "reason": "日振幅值达到15%的前5只证券"
-      },
-      {
-        "code": "301259",
-        "name": "艾布鲁",
-        "pct": -16.5103,
-        "turnover": 8.7891,
-        "instBuy": 625.53,
-        "instSell": 674.58,
-        "net": -49.05,
-        "ratio": -0.27,
-        "window": "当日",
-        "reason": "日跌幅达到15%的前5只证券"
+        "reason": "日跌幅偏离值达到7%的前5只证券"
       }
     ],
     "scope": "东方财富交易公开信息完整分页表；机构现身按证券与当日/3日窗口去重，净买/净卖家数及净额只统计当日窗口并剔除可转债"
@@ -666,9 +888,9 @@
       {
         "code": "510300",
         "name": "沪深300ETF",
-        "close": 4.018,
-        "pct": -1.03,
-        "amount": 181.76,
+        "close": 4.023,
+        "pct": 0.12,
+        "amount": 55.89,
         "shareLatest": 238.09,
         "shareDate": "20260824",
         "shareWow": null,
@@ -677,9 +899,9 @@
       {
         "code": "510500",
         "name": "中证500ETF",
-        "close": 6.053,
-        "pct": -3.71,
-        "amount": 115.83,
+        "close": 6.16,
+        "pct": 1.77,
+        "amount": 42.42,
         "shareLatest": null,
         "shareDate": "待披露",
         "shareWow": null,
@@ -688,9 +910,9 @@
       {
         "code": "512100",
         "name": "中证1000ETF",
-        "close": 2.3,
-        "pct": -4.8,
-        "amount": 118.29,
+        "close": 2.362,
+        "pct": 2.7,
+        "amount": 65.55,
         "shareLatest": 64.37,
         "shareDate": "20260824",
         "shareWow": null,
@@ -699,9 +921,9 @@
       {
         "code": "588000",
         "name": "科创50ETF",
-        "close": 1.3,
-        "pct": -3.27,
-        "amount": 98.36,
+        "close": 1.298,
+        "pct": -0.15,
+        "amount": 111.16,
         "shareLatest": null,
         "shareDate": "待披露",
         "shareWow": null,
@@ -710,9 +932,9 @@
       {
         "code": "159915",
         "name": "创业板ETF",
-        "close": 2.23,
-        "pct": -3.38,
-        "amount": 153.64,
+        "close": 2.295,
+        "pct": 2.91,
+        "amount": 137.5,
         "shareLatest": 183.16,
         "shareDate": "20260824",
         "shareWow": null,
@@ -1051,118 +1273,118 @@
         ]
       }
     },
-    "asOf": "成交额 2026-11-20；份额按各行最近可得日期",
+    "asOf": "成交额 2026-11-23；份额按各行最近可得日期",
     "source": "东方财富盘后ETF行情；份额无稳定公开T+1接口时保留最近可得值并标注日期"
   },
   "etfWeekly": {
     "status": "complete",
-    "asOf": "2026-11-16 18:30",
-    "dataDate": "2026-11-13",
+    "asOf": "2026-11-23 18:30",
+    "dataDate": "2026-11-20",
     "source": "Wind / 万得金融数据",
     "sourceUrl": "https://day-etf-dashboard.pages.dev/",
     "scope": "ETF 场内流通份额周度变化估算净申赎；受 Wind 字段覆盖限制，部分 ETF 以周度数据呈现；单位万份；6只合计为最新一期字段加总，不与成交额或主力资金混算",
-    "netFlow": -68090,
-    "inflowTotal": 112800,
-    "outflowTotal": -180890,
-    "inflowCount": 1,
-    "outflowCount": 5,
+    "netFlow": 578260,
+    "inflowTotal": 609210,
+    "outflowTotal": -30950,
+    "inflowCount": 4,
+    "outflowCount": 2,
     "maxInflow": {
-      "code": "159516.SZ",
-      "name": "半导体设备ETF国泰",
-      "bucket": "半导体设备",
-      "price": 0.493,
-      "pct": -5.56,
-      "fundSize": 394.67,
-      "latestFlow": 112800,
-      "dataDate": "2026-11-13",
-      "yearInflow": 10436600,
-      "yearOutflow": -6885400
+      "code": "510300.SH",
+      "name": "沪深300ETF华泰柏瑞",
+      "bucket": "沪深300",
+      "price": 4.023,
+      "pct": 0.12,
+      "fundSize": 1068.79,
+      "latestFlow": 364410,
+      "dataDate": "2026-11-20",
+      "yearInflow": 17678430,
+      "yearOutflow": -12947400
     },
     "maxOutflow": {
-      "code": "588000.SH",
-      "name": "科创50ETF华夏",
-      "bucket": "科创50",
-      "price": 1.282,
-      "pct": -5.32,
-      "fundSize": 941.29,
-      "latestFlow": -90600,
-      "dataDate": "2026-11-13",
-      "yearInflow": 11563200,
-      "yearOutflow": -6251250
+      "code": "563360.SH",
+      "name": "A500ETF华泰柏瑞",
+      "bucket": "中证A500",
+      "price": 1.069,
+      "pct": 0.66,
+      "fundSize": 364.19,
+      "latestFlow": -28500,
+      "dataDate": "2026-11-20",
+      "yearInflow": 8338800,
+      "yearOutflow": -4706700
     },
-    "yearNet": 5480910,
+    "yearNet": 25928630,
     "rows": [
       {
         "code": "510300.SH",
         "name": "沪深300ETF华泰柏瑞",
         "bucket": "沪深300",
-        "price": 4.054,
-        "pct": -0.71,
+        "price": 4.023,
+        "pct": 0.12,
         "fundSize": 1068.79,
-        "latestFlow": -19440,
-        "dataDate": "2026-11-13",
-        "yearInflow": 4319460,
-        "yearOutflow": -8807850
+        "latestFlow": 364410,
+        "dataDate": "2026-11-20",
+        "yearInflow": 17678430,
+        "yearOutflow": -12947400
       },
       {
         "code": "588000.SH",
         "name": "科创50ETF华夏",
         "bucket": "科创50",
-        "price": 1.282,
-        "pct": -5.32,
+        "price": 1.298,
+        "pct": -0.15,
         "fundSize": 941.29,
-        "latestFlow": -90600,
-        "dataDate": "2026-11-13",
-        "yearInflow": 11563200,
-        "yearOutflow": -6251250
+        "latestFlow": 119400,
+        "dataDate": "2026-11-20",
+        "yearInflow": 28545900,
+        "yearOutflow": -20542050
       },
       {
         "code": "563360.SH",
         "name": "A500ETF华泰柏瑞",
         "bucket": "中证A500",
-        "price": 1.08,
-        "pct": -1.46,
+        "price": 1.069,
+        "pct": 0.66,
         "fundSize": 364.19,
-        "latestFlow": -65100,
-        "dataDate": "2026-11-13",
-        "yearInflow": 4997400,
-        "yearOutflow": -2965500
+        "latestFlow": -28500,
+        "dataDate": "2026-11-20",
+        "yearInflow": 8338800,
+        "yearOutflow": -4706700
       },
       {
         "code": "510880.SH",
         "name": "红利ETF华泰柏瑞",
         "bucket": "红利指数",
-        "price": 3.428,
-        "pct": 1.6,
+        "price": 3.394,
+        "pct": -1.02,
         "fundSize": 188.56,
-        "latestFlow": -2150,
-        "dataDate": "2026-11-13",
-        "yearInflow": 634050,
-        "yearOutflow": -611200
+        "latestFlow": -2450,
+        "dataDate": "2026-11-20",
+        "yearInflow": 1524350,
+        "yearOutflow": -1524300
       },
       {
         "code": "588200.SH",
         "name": "科创芯片ETF嘉实",
         "bucket": "科创芯片",
-        "price": 0.815,
-        "pct": -6.54,
+        "price": 0.822,
+        "pct": 0.86,
         "fundSize": 475.8,
-        "latestFlow": -3600,
-        "dataDate": "2026-11-13",
-        "yearInflow": 4002299.99,
-        "yearOutflow": -4950900
+        "latestFlow": 20700,
+        "dataDate": "2026-11-20",
+        "yearInflow": 16487999.99,
+        "yearOutflow": -12318299.99
       },
       {
         "code": "159516.SZ",
         "name": "半导体设备ETF国泰",
         "bucket": "半导体设备",
-        "price": 0.493,
-        "pct": -5.56,
+        "price": 0.509,
+        "pct": -0.78,
         "fundSize": 394.67,
-        "latestFlow": 112800,
-        "dataDate": "2026-11-13",
-        "yearInflow": 10436600,
-        "yearOutflow": -6885400
+        "latestFlow": 104700,
+        "dataDate": "2026-11-20",
+        "yearInflow": 13546800,
+        "yearOutflow": -8154900
       }
     ],
     "verification": {
@@ -1171,13 +1393,13 @@
       "rows": [
         {
           "code": "510300",
-          "priceDiff": 0.036,
-          "pctDiff": 0.32
+          "priceDiff": 0,
+          "pctDiff": 0
         },
         {
           "code": "588000",
-          "priceDiff": 0.018,
-          "pctDiff": 2.05
+          "priceDiff": 0,
+          "pctDiff": 0
         }
       ]
     }
@@ -1430,18 +1652,17 @@
       }
     },
     "asOf": "OMO/10Y as-of 2026-08-27；DR007最近可得2026-08-26",
-    "source": "人民银行公告经上海证券报转引：1030亿7天期＋5035亿隔夜逆回购、无到期、净投放6065亿；10Y第三方收盘1.688%，午盘活跃券1.6920%；DR007当日终值待核；2026-08-28自动任务未取得稳定公开增量，保留上述日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期"
+    "source": "人民银行公告经上海证券报转引：1030亿7天期＋5035亿隔夜逆回购、无到期、净投放6065亿；10Y第三方收盘1.688%，午盘活跃券1.6920%；DR007当日终值待核；2026-08-28自动任务未取得稳定公开增量，保留上述日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期；本次自动任务未取得稳定公开增量，保留原日期"
   },
   "gaps": [
-    "两融为T+1披露，当前显示2026-11-19数据",
+    "两融为T+1披露，当前显示2026-11-20数据",
     "历史新高/新低需全市场K线计算，云端快速版当前待补",
-    "ETF份额资金温度最近数据点为2026-11-13，页面更新时间2026-11-16 18:30",
+    "ETF份额资金温度最近数据点为2026-11-20，页面更新时间2026-11-23 18:30",
     "宏观流动性显示OMO/10Y as-of 2026-08-27；DR007最近可得2026-08-26数据，未冒充当日"
   ],
   "trends": {
     "turnover": {
       "dates": [
-        "2026-10-09",
         "2026-10-12",
         "2026-10-13",
         "2026-10-14",
@@ -1470,10 +1691,10 @@
         "2026-11-17",
         "2026-11-18",
         "2026-11-19",
-        "2026-11-20"
+        "2026-11-20",
+        "2026-11-23"
       ],
       "total": [
-        19005.55,
         15378.31,
         16759.18,
         14144.03,
@@ -1502,12 +1723,12 @@
         14576.95,
         13697.03,
         13051.47,
-        14222.01
+        14222.01,
+        15528.8
       ]
     },
     "breadth": {
       "dates": [
-        "2026-10-09",
         "2026-10-12",
         "2026-10-13",
         "2026-10-14",
@@ -1536,10 +1757,10 @@
         "2026-11-17",
         "2026-11-18",
         "2026-11-19",
-        "2026-11-20"
+        "2026-11-20",
+        "2026-11-23"
       ],
       "up_limit": [
-        null,
         46,
         67,
         36,
@@ -1568,10 +1789,10 @@
         37,
         41,
         23,
-        28
+        28,
+        146
       ],
       "down_limit": [
-        null,
         19,
         8,
         11,
@@ -1600,10 +1821,10 @@
         67,
         40,
         68,
-        58
+        58,
+        3
       ],
       "broken": [
-        null,
         25,
         19,
         24,
@@ -1632,7 +1853,8 @@
         20,
         24,
         24,
-        7
+        7,
+        24
       ],
       "new_high": [
         null,
@@ -1701,7 +1923,6 @@
     },
     "margin": {
       "dates": [
-        "2026-10-08",
         "2026-10-09",
         "2026-10-12",
         "2026-10-13",
@@ -1730,10 +1951,10 @@
         "2026-11-16",
         "2026-11-17",
         "2026-11-18",
-        "2026-11-19"
+        "2026-11-19",
+        "2026-11-20"
       ],
       "rzye": [
-        25445.96,
         25300.55,
         25252.96,
         25162.78,
@@ -1762,10 +1983,10 @@
         22357.28,
         22170.96,
         22082.62,
-        21927.43
+        21927.43,
+        21508.62
       ],
       "rqye": [
-        295.63,
         296.02,
         297.2,
         295.67,
@@ -1794,12 +2015,12 @@
         292.84,
         295.1,
         295.68,
-        295.42
+        295.42,
+        289.34
       ]
     },
     "lhb": {
       "dates": [
-        "2026-10-09",
         "2026-10-12",
         "2026-10-13",
         "2026-10-14",
@@ -1828,10 +2049,10 @@
         "2026-11-17",
         "2026-11-18",
         "2026-11-19",
-        "2026-11-20"
+        "2026-11-20",
+        "2026-11-23"
       ],
       "v": [
-        -1.99,
         -5.35,
         -1.17,
         -4.19,
@@ -1860,7 +2081,8 @@
         -3.6,
         7.24,
         -8.55,
-        -2.05
+        -2.05,
+        3.23
       ]
     }
   },
@@ -1881,14 +2103,14 @@
     "最近可得的人民银行/资金利率/债券收益率核验数据（宏观模块按真实日期保留）"
   ],
   "outlook": {
-    "date": "2026-11-20",
+    "date": "2026-11-23",
     "next_trade_date": null,
     "mode": "规则化情景观察，不是收益预测",
     "signals": [
       {
         "tag": "量能",
         "title": "成交能否支持指数延续？",
-        "watch": "沪深成交14222亿元，观察次日量价是否同向。",
+        "watch": "沪深成交15529亿元，观察次日量价是否同向。",
         "scenarios": [
           {
             "label": "放量共振",
@@ -1910,7 +2132,7 @@
       {
         "tag": "情绪",
         "title": "高标与连板梯队如何反馈？",
-        "watch": "最高4连板，观察高标晋级与炸板率。",
+        "watch": "最高5连板，观察高标晋级与炸板率。",
         "scenarios": [
           {
             "label": "梯队加强",
@@ -1932,7 +2154,7 @@
       {
         "tag": "资金",
         "title": "主力方向能否持续？",
-        "watch": "当前行业净流入居前：印制电路板。",
+        "watch": "当前行业净流入居前：电子。",
         "scenarios": [
           {
             "label": "方向延续",
@@ -1954,7 +2176,7 @@
       {
         "tag": "流动性",
         "title": "杠杆与短端资金是否平稳？",
-        "watch": "两融显示2026-11-19，宏观利率按各自披露日。",
+        "watch": "两融显示2026-11-20，宏观利率按各自披露日。",
         "scenarios": [
           {
             "label": "边际改善",
@@ -1976,9 +2198,9 @@
     ]
   },
   "narrative": {
-    "title": "2026-11-20 A股资金面复盘",
+    "title": "2026-11-23 A股资金面复盘",
     "subtitle": "云端盘后自动更新 · 八模块完整看板",
-    "conclusion": "沪指-1.23%，沪深成交14222.01亿元；印制电路板行业主力净流入居前。龙虎榜、两融与宏观数据按各自真实披露日展示。",
+    "conclusion": "沪指+0.15%，沪深成交15528.80亿元；电子行业主力净流入居前。龙虎榜、两融与宏观数据按各自真实披露日展示。",
     "notes": {
       "s1": "指数收盘与成交额采用盘后延迟行情，并用腾讯行情作独立复核。",
       "s2": "涨跌停与炸板采用公开涨停池口径；云端连板为盘后池初筛，完整日报需严格K线逐只复核。",
@@ -1994,37 +2216,37 @@
   "summary": [
     {
       "label": "上证指数",
-      "value": 3533.79,
-      "sub": -1.23,
+      "value": 3538.95,
+      "sub": 0.15,
       "tone": "market"
     },
     {
       "label": "沪深成交",
-      "value": 14222.01,
+      "value": 15528.8,
       "sub": "亿元",
       "tone": "flat"
     },
     {
       "label": "涨停 / 跌停",
-      "value": "28 / 58",
-      "sub": "炸板7家",
+      "value": "146 / 3",
+      "sub": "炸板24家",
       "tone": "flat"
     },
     {
       "label": "最高板",
-      "value": "4连板",
-      "sub": "3只连板初筛",
+      "value": "5连板",
+      "sub": "16只连板初筛",
       "tone": "flat"
     },
     {
       "label": "两融余额",
-      "value": 22222.85,
-      "sub": "2026-11-19",
+      "value": 21797.96,
+      "sub": "2026-11-20",
       "tone": "flat"
     },
     {
       "label": "龙虎榜机构",
-      "value": -2.05,
+      "value": 3.23,
       "sub": "亿元·当日窗口",
       "tone": "market"
     }
